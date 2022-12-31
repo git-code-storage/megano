@@ -1,23 +1,52 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.utils.safestring import mark_safe
+from .models import CustomUser, DeliveryAddress
 
-from .models import CustomUser
+
+class DeliveryAddressInline(admin.StackedInline):
+    model = DeliveryAddress
+    extra = 1
 
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
-    model = CustomUser
-    list_display = ('email', 'is_staff', 'is_active',)
-    list_filter = ('email', 'is_staff', 'is_active',)
+
+    list_display = ('email', 'phone_number', 'is_staff', 'is_active', 'date_of_registration')
+    list_filter = ('email', 'phone_number', 'is_staff', 'is_active',)
     fieldsets = (
-        (None, {'fields': ('email', 'password')}),
+        ('Personal data', {'fields': ('email', 'phone_number', 'first_name', 'last_name', 'password', 'avatar',
+                                      'get_big_avatar')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2', 'is_staff', 'is_active')}
+            'fields': ('email', 'phone_number', 'password1', 'password2', 'is_staff', 'is_active', 'avatar')}
         ),
     )
-    search_fields = ('email',)
+    search_fields = ('email', 'phone_number',)
     ordering = ('email',)
+    readonly_fields = ('get_small_avatar', 'get_big_avatar',)
+    inlines = [DeliveryAddressInline]
+
+    def get_small_avatar(self, obj):
+        if obj.avatar.url:
+            return mark_safe(f'<img src={obj.avatar.url} width="50" height="60">')
+
+    def get_big_avatar(self, obj):
+        if obj.avatar.url:
+            return mark_safe(f'<img src={obj.avatar.url} width="200" height="240">')
+
+
+    get_small_avatar.short_description = 'Avatar view'
+    get_big_avatar.short_description = 'Avatar view'
+
+
+@admin.register(DeliveryAddress)
+class DeliveryAddressAdmin(admin.ModelAdmin):
+
+    list_display = ('user', 'city', 'street', 'bdg', 'appart')
+    list_filter = ('city',)
+    search_fields = ('user', 'city', 'street',)
+    ordering = ('user',)

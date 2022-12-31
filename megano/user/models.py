@@ -39,6 +39,10 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)
+    phone_number = models.CharField(max_length=12, unique=True, default=None)
+    date_of_registration = models.DateTimeField(auto_now_add=True, null=True)
+    avatar = models.ImageField(upload_to='avatars/', blank=True, null=True, default='avatars/no_avatar_image.jpg')
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -47,3 +51,21 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class DeliveryAddress(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='address')
+    city = models.CharField(max_length=50, blank=True, null=True)
+    street = models.CharField(max_length=100, blank=True, null=True)
+    bdg = models.CharField(max_length=10, blank=True, null=True)
+    appart = models.CharField(max_length=10, blank=True, null=True)
+
+    class Meta:
+        db_table = 'delivery_address'
+        verbose_name = 'address'
+        verbose_name_plural = 'addresses'
+
+    def __str__(self):
+        address = f'{self.city} {self.street} bdg: {self.bdg} app: {self.appart}'
+        return address
+
