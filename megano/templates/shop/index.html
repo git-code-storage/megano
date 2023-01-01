@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="Middle">
+    <div class="Section">
+      <div class="wrap">
+        <div class="BannersHome"><a class="BannersHomeBlock" href="#">
+            <div class="BannersHomeBlock-row">
+              <div class="BannersHomeBlock-block">
+                <strong class="BannersHomeBlock-title">Video Cards
+                </strong>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$199.00</span>
+                </div>
+              </div>
+              <div class="BannersHomeBlock-block">
+                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                </div>
+              </div>
+            </div></a><a class="BannersHomeBlock" href="#">
+            <div class="BannersHomeBlock-row">
+              <div class="BannersHomeBlock-block">
+                <strong class="BannersHomeBlock-title">Head Phones
+                </strong>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$210.00</span>
+                </div>
+              </div>
+              <div class="BannersHomeBlock-block">
+                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                </div>
+              </div>
+            </div></a><a class="BannersHomeBlock" href="#">
+            <div class="BannersHomeBlock-row">
+              <div class="BannersHomeBlock-block">
+                <strong class="BannersHomeBlock-title">Bass Speakers
+                </strong>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$159.00</span>
+                </div>
+              </div>
+              <div class="BannersHomeBlock-block">
+                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                </div>
+              </div>
+            </div></a>
+        </div>
+      </div>
+    </div>
+    <div class="Section Section_column Section_columnDesktop"  >
+      <div class="wrap">
+        <div class="Section-content">
+          <header class="Section-header">
+            <h2 class="Section-title">Popular Products
+            </h2>
+          </header>
+          <div class="Cards">
+            {% for product in products %}
+            <div class="Card"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+              <div class="Card-content">
+                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                </strong>
+                <div class="Card-description">
+                  <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
+                  </div>
+                  <div class="Card-category">{{ product.category.name }}
+                  </div>
+                  <div class="Card-hover"><a class="Card-btn" href="#"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% for product in products_hide_md %}
+            <div class="Card hide_md"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+              <div class="Card-content">
+                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                </strong>
+                <div class="Card-description">
+                  <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
+                  </div>
+                  <div class="Card-category">{{ product.category.name }}
+                  </div>
+                  <div class="Card-hover"><a class="Card-btn" href="#"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% for product in products_hide_1450 %}
+            <div class="Card hide_md hide_1450"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+              <div class="Card-content">
+                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                </strong>
+                <div class="Card-description">
+                  <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
+                  </div>
+                  <div class="Card-category">{{ product.category.name }}
+                  </div>
+                  <div class="Card-hover"><a class="Card-btn" href="#"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section Section_column Section_columnRight">
+      <div class="wrap">
+        <div class="Section-column">
+          <div class="Section-columnSection Section-columnSection_mark">
+            <div class="media media_advantage">
+              <div class="media-image"><img src="{% static 'img/icons/advantages/shipping.svg' %}" alt="shipping.svg"/>
+              </div>
+              <div class="media-content">
+                <strong class="media-title">Shipping & Returns
+                </strong>
+                <p class="media-text">World wide shipping
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="Section-columnSection Section-columnSection_mark">
+            <div class="media media_advantage">
+              <div class="media-image"><img src="{% static 'img/icons/advantages/moneyBack.svg' %}" alt="moneyBack.svg"/>
+              </div>
+              <div class="media-content">
+                <strong class="media-title">Money Back
+                </strong>
+                <p class="media-text">Guaranted payments
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="Section-columnSection Section-columnSection_mark">
+            <div class="media media_advantage">
+              <div class="media-image"><img src="{% static 'img/icons/advantages/support.svg' %}" alt="support.svg"/>
+              </div>
+              <div class="media-content">
+                <strong class="media-title">Support Policy
+                </strong>
+                <p class="media-text">Fast support team
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="Section-columnSection Section-columnSection_mark">
+            <div class="media media_advantage">
+              <div class="media-image"><img src="{% static 'img/icons/advantages/quality.svg' %}" alt="quality.svg"/>
+              </div>
+              <div class="media-content">
+                <strong class="media-title">Quality Guarantee
+                </strong>
+                <p class="media-text">Best guaranted items
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Section-content">
+          <div class="Slider Slider_carousel">
+            <header class="Section-header Section-header_close">
+              <h2 class="Section-title">Limited edition
+              </h2>
+              <div class="Section-control">
+                <div class="Slider-navigate">
+                </div>
+              </div>
+            </header>
+            <div class="Slider-box Cards">
+              {% for product in is_limited %}
+              <div class="Slider-item">
+                <div class="Slider-content">
+                  <div class="Card"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+              <div class="Card-content">
+                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                </strong>
+                <div class="Card-description">
+                  <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
+                  </div>
+                  <div class="Card-category">{{ product.category.name }}
+                  </div>
+                  <div class="Card-hover"><a class="Card-btn" href="#"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

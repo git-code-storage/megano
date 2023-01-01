@@ -10,21 +10,23 @@ class CategoryAdmin(MPTTModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
-@admin.register(Good)
-class GoodAdmin(admin.ModelAdmin):
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'price', 'amount', 'category', 'is_limited', 'index',)
+    list_display = ('name', 'price', 'amount', 'category', 'is_limited', 'index', 'sold', 'is_active',)
     prepopulated_fields = {'slug': ('name',)}
+    list_filter = ('category',)
+    search_fields = ('name',)
 
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'good', 'feedback', 'score',)
-    list_filter = ('user', 'good', 'score',)
-    search_fields = ('user', 'good',)
+    list_display = ('user', 'product', 'feedback', 'score',)
+    list_filter = ('user', 'product', 'score',)
+    search_fields = ('user', 'product',)
     ordering = ('creation_date',)
-    readonly_fields = ('user', 'good', 'feedback', 'score',)
+    readonly_fields = ('user', 'product', 'feedback', 'score',)
 
 
 @admin.register(Payment)
@@ -40,8 +42,8 @@ class PaymentAdmin(admin.ModelAdmin):
 @admin.register(OrderItem)
 class OrderItemAdmin(admin.ModelAdmin):
 
-    list_display = ('order', 'good', 'price', 'quantity', 'date_added',)
-    search_fields = ('order', 'good', 'date_added',)
+    list_display = ('order', 'product', 'price', 'quantity', 'date_added',)
+    search_fields = ('order', 'product', 'date_added',)
     readonly_fields = ('date_added',)
 
 

@@ -1,5 +1,6 @@
 from django.db import models
 from user.models import CustomUser, DeliveryAddress
+from django.urls import reverse
 from mptt.models import MPTTModel, TreeForeignKey
 from django.template.defaultfilters import slugify
 
@@ -8,6 +9,7 @@ class Category(MPTTModel):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     icon = models.ImageField(upload_to='icon_category/', null=True, blank=True)
+    image = models.ImageField(upload_to='image_category/', null=True, blank=True)
     is_favourites = models.BooleanField(default=False)
     parent = TreeForeignKey(
         'self',
@@ -20,8 +22,8 @@ class Category(MPTTModel):
     def __str__(self):
         return self.name
 
-    # def get_absolute_url(self):
-    #     return reverse('article_detail', kwargs={'slug': self.slug})
+    def get_absolute_url(self):
+        return reverse('product_by_category', kwargs={'category_slug': self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -43,7 +45,7 @@ class Category(MPTTModel):
         order_insertion_by = ['name']
 
 
-class Good(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     description = models.TextField()
@@ -54,12 +56,14 @@ class Good(models.Model):
     image = models.ImageField(upload_to='goods/', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     is_limited = models.BooleanField(default=False)
-    index = models.PositiveSmallIntegerField(default=0)
+    index = models.DecimalField(max_digits=2, decimal_places=1, default=0)
+    sold = models.PositiveSmallIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
-        db_table = 'good'
-        verbose_name = 'good'
-        verbose_name_plural = 'goods'
+        db_table = 'product'
+        verbose_name = 'product'
+        verbose_name_plural = 'products'
         ordering = ['name']
 
     def __str__(self):
@@ -81,7 +85,7 @@ class Good(models.Model):
 
 class Feedback(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True)
-    good = models.ForeignKey(Good, on_delete=models.CASCADE, null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     feedback = models.TextField()
     score = models.PositiveSmallIntegerField(default=0)
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -124,7 +128,7 @@ class Payment(models.Model):
 
 
 class OrderItem(models.Model):
-    good = models.ForeignKey(Good, on_delete=models.RESTRICT, blank=True, null=True)
+    product = models.ForeignKey(Product, on_delete=models.RESTRICT, blank=True, null=True)
     order = models.ForeignKey('Order', on_delete=models.RESTRICT, blank=True, null=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -141,7 +145,7 @@ class OrderItem(models.Model):
         verbose_name_plural = 'orderitems'
 
     def __str__(self):
-        return self.good
+        return self.product
 
 
 class Order(models.Model):
