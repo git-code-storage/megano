@@ -1,0 +1,26 @@
+{% load static mptt_tags %}
+<div class="CategoriesButton-content">
+    {% recursetree categories %}
+
+            {% if node.is_root_node %}
+                <div class="CategoriesButton-link"><a href="#">
+            {% endif %}
+
+               <div class="CategoriesButton-icon"><img src="{% static 'img/icons/departments/1.svg' %}" alt="1.svg"/>
+                  </div><span class="CategoriesButton-text">{{ node.name }}</span></a>
+
+            {% if not node.is_leaf_node %}
+                <a class="CategoriesButton-arrow" href="#"></a>
+                <div class="CategoriesButton-submenu">
+                    {{ children }}
+                </div>
+            {% endif %}
+
+            {% if node.is_root_node %}
+                </div>
+            {% endif %}
+
+    {% endrecursetree %}
+</div>
+
+

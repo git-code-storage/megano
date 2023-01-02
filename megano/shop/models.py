@@ -3,6 +3,7 @@ from user.models import CustomUser, DeliveryAddress
 from django.urls import reverse
 from mptt.models import MPTTModel, TreeForeignKey
 from django.template.defaultfilters import slugify
+from ckeditor.fields import RichTextField
 
 
 class Category(MPTTModel):
@@ -22,6 +23,7 @@ class Category(MPTTModel):
     def __str__(self):
         return self.name
 
+    @property
     def get_absolute_url(self):
         return reverse('product_by_category', kwargs={'category_slug': self.slug})
 
@@ -46,9 +48,9 @@ class Category(MPTTModel):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True)
-    description = models.TextField()
+    name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
+    description = RichTextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     amount = models.PositiveSmallIntegerField(default=0)
     creation_date = models.DateTimeField(auto_now_add=True)
@@ -73,6 +75,10 @@ class Product(models.Model):
         if not self.slug:
             self.slug = slugify(self.name)
         return super().save(*args, **kwargs)
+
+    @property
+    def get_absolute_url(self):
+        return reverse('product_detail', kwargs={'product_slug': self.slug})
 
     @property
     def image_url(self):

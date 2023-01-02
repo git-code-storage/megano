@@ -23,7 +23,18 @@ def index(request):
 class ProductByCategoryListView(ListView):
 
     template_name = 'shop/catalog.html'
+    context_object_name = 'products'
+    paginate_by = 8
 
     def get_queryset(self):
         q = Q(is_active=True) & Q(category__slug=self.kwargs.get('category_slug'))
         return Product.objects.filter(q)
+
+
+class ProductDetailView(DetailView):
+
+    model = Product
+    context_object_name = 'product'
+    template_name = 'shop/product.html'
+    slug_url_kwarg = 'product_slug'
+

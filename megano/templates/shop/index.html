@@ -54,9 +54,9 @@
           </header>
           <div class="Cards">
             {% for product in products %}
-            <div class="Card"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+            <div class="Card"><a class="Card-picture" href="{{ product.get_absolute_url }}"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
               <div class="Card-content">
-                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                <strong class="Card-title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                 </strong>
                 <div class="Card-description">
                   <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
@@ -70,9 +70,9 @@
             </div>
             {% endfor %}
             {% for product in products_hide_md %}
-            <div class="Card hide_md"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+            <div class="Card hide_md"><a class="Card-picture" href="{{ product.get_absolute_url }}"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
               <div class="Card-content">
-                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                <strong class="Card-title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                 </strong>
                 <div class="Card-description">
                   <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
@@ -86,9 +86,9 @@
             </div>
             {% endfor %}
             {% for product in products_hide_1450 %}
-            <div class="Card hide_md hide_1450"><a class="Card-picture" href="#"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+            <div class="Card hide_md hide_1450"><a class="Card-picture" href="{{ product.get_absolute_url }}"><img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
               <div class="Card-content">
-                <strong class="Card-title"><a href="#">{{ product.name }}</a>
+                <strong class="Card-title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                 </strong>
                 <div class="Card-description">
                   <div class="Card-cost"><span class="Card-price">${{ product.price }}</span>
