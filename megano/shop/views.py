@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.views.generic import DetailView, ListView
+from .utils import get_order_items_annonimous, get_total_cart_items
 from .models import *
 
 
@@ -11,13 +12,46 @@ def index(request):
     products = items[:4]
     products_hide_md = items[5:7]
     products_hide_1450 = items[7:9]
+    total_cart_items = get_total_cart_items(request)
     context = {
         'products': products,
         'products_hide_md': products_hide_md,
         'products_hide_1450': products_hide_1450,
         'is_limited': is_limited,
+        'total_cart_items': total_cart_items,
     }
     return render(request, 'shop/index.html', context=context)
+
+
+def add_cart(request, product_slug):
+    if request.user.is_anonymous:
+        if 'cart' in request.session:
+            if product_slug not in request.session['cart'].keys():
+                request.session['cart'][product_slug] = 1
+            else:
+                request.session['cart'][product_slug] += 1
+        else:
+            request.session['cart'] = {product_slug: 1, }
+        products = Product.objects.filter(slug__in=request.session['cart'].keys())
+        cart_items = get_order_items_annonimous(products, request.session['cart'])
+    else:
+        product = Product.objects.get(slug=product_slug)
+        order, created = Order.objects.get_or_create(customer=request.user, complete=False)
+        order.save()
+        orderitem, created = OrderItem.objects.get_or_create(
+            product=product,
+            order=order,
+        )
+        orderitem.quantity += 1
+        orderitem.save()
+    return redirect(request.META.get('HTTP_REFERER'))
+
+
+def cart(request):
+    cart_items = order.orderitem_set.select_related('product').all()
+    total_cart_items = get_total_cart_items(request)
+    context = {'cart_items': cart_items, 'total_cart_items': total_cart_items}
+    pass
 
 
 class ProductByCategoryListView(ListView):

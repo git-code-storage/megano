@@ -7,5 +7,5 @@ register = template.Library()
 
 @register.inclusion_tag('shop/include/tags/category_menu.html')
 def get_categories():
-    categories = Category.objects.filter(parent__isnull=True).order_by('name')
+    categories = Category.objects.all()
     return {'categories': categories}
