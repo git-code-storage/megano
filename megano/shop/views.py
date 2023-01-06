@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.views.generic import DetailView, ListView
-from .utils import get_order_items_annonimous, get_total_cart_items
+from .utils import get_total_cart_items
 from .models import *
 
 
@@ -12,13 +12,14 @@ def index(request):
     products = items[:4]
     products_hide_md = items[5:7]
     products_hide_1450 = items[7:9]
-    total_cart_items = get_total_cart_items(request)
+    total_cart_items, total_cost = get_total_cart_items(request)
     context = {
         'products': products,
         'products_hide_md': products_hide_md,
         'products_hide_1450': products_hide_1450,
         'is_limited': is_limited,
         'total_cart_items': total_cart_items,
+        'total_cost': total_cost,
     }
     return render(request, 'shop/index.html', context=context)
 
@@ -28,12 +29,13 @@ def add_cart(request, product_slug):
         if 'cart' in request.session:
             if product_slug not in request.session['cart'].keys():
                 request.session['cart'][product_slug] = 1
+                request.session.modified = True
             else:
                 request.session['cart'][product_slug] += 1
+                request.session.modified = True
         else:
             request.session['cart'] = {product_slug: 1, }
-        products = Product.objects.filter(slug__in=request.session['cart'].keys())
-        cart_items = get_order_items_annonimous(products, request.session['cart'])
+            request.session.modified = True
     else:
         product = Product.objects.get(slug=product_slug)
         order, created = Order.objects.get_or_create(customer=request.user, complete=False)

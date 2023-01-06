@@ -70,8 +70,13 @@
           </div>
           <nav class="row-block">
             <div class="row ControlPanel-rowSplit">
-              <div class="row-block"><a class="ControlPanel-title" href="account.html">Login / Register</a>
+              {% if request.user.is_authenticated %}
+              <div class="row-block"><a class="ControlPanel-title" href="{% url 'profile' %}">{{ request.user.email }}</a>|<a class="ControlPanel-title" href="{% url 'logout' %}">Logout</a>
               </div>
+              {% else %}
+              <div class="row-block"><a class="ControlPanel-title" href="{% url 'login' %}">Login / Register</a>
+              </div>
+              {% endif %}
             </div>
           </nav>
         </div>
@@ -109,7 +114,7 @@
         </nav>
         <div class="row-block">
           <div class="CartBlock"><a class="CartBlock-block" href="cart.html"><img class="CartBlock-img" src="{% static 'img/icons/cart.svg' %}" alt="cart.svg"/><span class="CartBlock-amount">{{ total_cart_items }}</span></a>
-            <div class="CartBlock-block"><span class="CartBlock-price">0.00$</span>
+            <div class="CartBlock-block"><span class="CartBlock-price">{{ total_cost }}$</span>
             </div>
           </div>
         </div>
