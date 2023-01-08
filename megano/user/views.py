@@ -1,3 +1,4 @@
+import logging
 from django.contrib.auth import views, login
 from datetime import datetime
 from shop.utils import get_total_cart_items
@@ -6,6 +7,7 @@ from django.shortcuts import render, redirect
 from .utils import add_cart_to_user
 
 # Create your views here.
+logger = logging.getLogger(__name__)
 
 
 class LoginView(views.LoginView):
@@ -30,6 +32,13 @@ class LoginView(views.LoginView):
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
+
+
+class LogoutView(views.LogoutView):
+
+    def dispatch(self, request, *args, **kwargs):
+        logger.info(f'[LogoutView.get_success_url] - {datetime.now()} - Logout completed: {self.request.user}')
+        return super().dispatch(request, *args, **kwargs)
 
 
 def registration(request):
