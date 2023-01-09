@@ -113,7 +113,7 @@
           </div>
         </nav>
         <div class="row-block">
-          <div class="CartBlock"><a class="CartBlock-block" href="cart.html"><img class="CartBlock-img" src="{% static 'img/icons/cart.svg' %}" alt="cart.svg"/><span class="CartBlock-amount">{{ total_cart_items }}</span></a>
+          <div class="CartBlock"><a class="CartBlock-block" href="{% url 'cart' %}"><img class="CartBlock-img" src="{% static 'img/icons/cart.svg' %}" alt="cart.svg"/><span class="CartBlock-amount">{{ total_cart_items }}</span></a>
             <div class="CartBlock-block"><span class="CartBlock-price">{{ total_cost }}$</span>
             </div>
           </div>
@@ -135,6 +135,7 @@
               </div>
             </div>
 
+
             {% get_categories %}
 
 
@@ -154,13 +155,15 @@
       </div>
     </div>
   </header>
-  {% block path %}
 
-  {% endblock path %}
 
   {% block content %}
 
+
+
   {% endblock content %}
+
+
   <footer class="Footer">
     <div class="wrap">
       <div class="row Footer-main">

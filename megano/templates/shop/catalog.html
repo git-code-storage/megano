@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+
 {% block content %}
 
   <div class="Middle Middle_top">
@@ -10,9 +12,9 @@
           <h1 class="Middle-title">Catalog Megano
           </h1>
           <ul class="breadcrumbs Middle-breadcrumbs">
-            <li class="breadcrumbs-item"><a href="index.html">home</a>
+            <li class="breadcrumbs-item"><a href="/">home</a>
             </li>
-            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Catalog</span>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>{{ category.name|upper }}</span>
             </li>
           </ul>
         </div>
@@ -30,7 +32,7 @@
               <form class="form" action="" method="get">
                 <div class="form-group">
                   <div class="range Section-columnRange">
-                    <input class="range-line" id="price" name="price_range" type="text" data-type="double" data-min="7" data-max="5000" data-from="{{price_from}}" data-to="{{price_to}}"/>
+                    <input class="range-line" id="price" name="price_range" type="text" data-type="double" data-min="{{ price_min }}" data-max="{{ price_max }}" data-from="{{price_from}}" data-to="{{price_to}}"/>
                     <div class="range-price">Price:&#32;
                       <div class="rangePrice">
                       </div>
@@ -38,7 +40,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input class="form-input form-input_full" id="title" name="title" type="text" value="{{ title }}" placeholder="Название"/>
+                  <input class="form-input form-input_full" id="title" name="name" type="text" value="{{ title }}" placeholder="Название"/>
                 </div>
                 <div class="form-group">
                   <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
@@ -117,7 +119,7 @@
                   </div>
                   <div class="Card-category">{{ product.category.name }}
                   </div>
-                  <div class="Card-hover"><a class="Card-btn" href="{% url 'cart_add' product.slug %}"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
+                  <div class="Card-hover"><a class="Card-btn" href="{% url 'cart_add' product.slug 1 %}"><img src="{% static 'img/icons/card/cart.svg' %}" alt="cart.svg"/></a>
                   </div>
                 </div>
               </div>
@@ -153,4 +155,5 @@
       </div>
     </div>
   </div>
+
 {% endblock content %}
