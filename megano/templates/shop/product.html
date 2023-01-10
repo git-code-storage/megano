@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block script %}
+
+<script type="text/javascript">
+
+
+  var today = new Date();
+  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+
+  function addAmount()
+  {
+    var userInput = Number(document.getElementById("amount").value) + 1;
+    document.cookie=name + "amount=" + escape(userInput) + "; path=/; expires=" + expiry.toGMTString();
+  }
+
+  function remAmount()
+  {
+    if (Number(document.getElementById("amount").value) > 0) {
+        var userInput = Number(document.getElementById("amount").value) - 1;
+        document.cookie=name + "amount=" + escape(userInput) + "; path=/; expires=" + expiry.toGMTString();
+    }
+  }
+
+</script>
+
+<script>
+        document.cookie = "amount=1; path=/; expires=-1";
+</script>
+
+
+
+{% endblock script %}
+
 {% block content %}
   <div class="Middle Middle_top">
     <div class="Middle-top">
@@ -25,7 +57,13 @@
               <div class="ProductCard-photo">
                 <img src="{{ product.image_url }}" alt="{{ product.name }}"/>
               </div>
-              <div class="ProductCard-picts"><a class="ProductCard-pict ProductCard-pict_ACTIVE" href="assets/img/content/home/bigGoods.png"><img src="assets/img/content/home/bigGoods.png" alt="bigGoods.png"/></a><a class="ProductCard-pict" href="assets/img/content/home/slider.png"><img src="assets/img/content/home/slider.png" alt="slider.png"/></a><a class="ProductCard-pict" href="assets/img/content/home/videoca.png"><img src="assets/img/content/home/videoca.png" alt="videoca.png"/></a>
+              <div class="ProductCard-picts">
+                <a class="ProductCard-pict ProductCard-pict_ACTIVE" href="{% static '/img/content/home/bigGoods.png' %}">
+                  <img src="{% static '/img/content/home/bigGoods.png' %}" alt="{{ product.name }}"/></a>
+                <a class="ProductCard-pict" href="{% static '/img/content/home/slider.png">
+                  <img src="assets/img/content/home/slider.png" alt="{{ product.name }}"/></a>
+                <a class="ProductCard-pict" href="assets/img/content/home/videoca.png">
+                  <img src="assets/img/content/home/videoca.png" alt="{{ product.name }}"/></a>
               </div>
             </div>
             <div class="ProductCard-desc">
@@ -51,15 +89,15 @@
               </div>
               <div class="ProductCard-cart">
                 <div class="ProductCard-cartElement ProductCard-cartElement_amount">
-                  <div class="Amount Amount_product">
-                    <button class="Amount-remove" type="button">
+                  <div class="Amount-a Amount_product-a">
+                    <button class="Amount-remove-a" type="button" onclick="remAmount()">
                     </button>
-                    <input class="Amount-input form-input" name="amount" type="text" value="1"/>
-                    <button class="Amount-add" type="button">
+                    <input class="Amount-input-a form-input" name="amount" id="amount" type="text" value="1"/>
+                    <button class="Amount-add-a" type="button" onclick="addAmount()">
                     </button>
                   </div>
                 </div>
-                <div class="ProductCard-cartElement"><a class="btn btn_primary" href="#"><img class="btn-icon" src="{% static 'img/icons/card/cart_white.svg' %}" alt="cart_white.svg"/><span class="btn-content">Add To Cart</span></a>
+                <div class="ProductCard-cartElement"><a class="btn btn_primary" href="{% url 'cook_add' product.slug %}"><img class="btn-icon" src="{% static 'img/icons/card/cart_white.svg' %}" alt="cart_white.svg"/><span class="btn-content">Add To Cart</span></a>
                 </div>
               </div>
               <div class="ProductCard-footer">

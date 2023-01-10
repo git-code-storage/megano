@@ -31,7 +31,7 @@ def index(request):
     return render(request, 'shop/index.html', context=context)
 
 
-def add_cart(request, product_slug, amt):
+def add_cart(request, product_slug, amt, referer=None):
     if request.user.is_anonymous:
         if 'cart' in request.session:
             if product_slug not in request.session['cart'].keys():
@@ -53,7 +53,17 @@ def add_cart(request, product_slug, amt):
         )
         orderitem.quantity += amt
         orderitem.save()
-    return redirect(request.META.get('HTTP_REFERER'))
+        if not referer:
+            referer = request.META.get('HTTP_REFERER')
+    return redirect(referer)
+
+
+def add_cart_from_cookies(request, product_slug):
+    if 'amount' in request.COOKIES:
+        if int(request.COOKIES.get('amount')) > 0:
+            amt = int(request.COOKIES.get('amount'))
+            referer = request.META.get('HTTP_REFERER')
+            return add_cart(request, product_slug, amt, referer=referer)
 
 
 def remove_cart(request, product_slug):
@@ -207,6 +217,14 @@ class ProductDetailView(DetailView):
     context_object_name = 'product'
     template_name = 'shop/product.html'
     slug_url_kwarg = 'product_slug'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        total_cart_items, total_cost = get_total_cart_items(self.request)
+        context['total_cart_items'] = total_cart_items
+        context['total_cost'] = total_cost
+        return context
+
 
 
 

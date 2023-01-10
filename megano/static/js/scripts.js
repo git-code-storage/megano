@@ -649,29 +649,29 @@ var Cart = function(){
         }
     };
 };
-//Cart().init();
-//var Amount = function(){
-//    var $amount = $('.Amount');
-//    var $add = $('.Amount-add');
-//    var $input = $('.Amount-input');
-//    var $remove = $('.Amount-remove');
-//    return {
-//        init: function(){
-//            $add.on('click', function(e){
-//                e.preventDefault();
-//                var $inputThis = $(this).siblings($input).filter($input);
-//                var value = parseFloat($inputThis.val());
-//                $inputThis.val( value + 1);
-//            });
-//            $remove.on('click', function(e){
-//                e.preventDefault();
-//                var $inputThis = $(this).siblings($input).filter($input);
-//                var value = parseFloat($inputThis.val());
-//                $inputThis.val(value>0?value - 1:0);
-//            });
-//        }
-//    };
-//};
+Cart().init();
+var Amount = function(){
+    var $amount = $('.Amount-a');
+    var $add = $('.Amount-add-a');
+    var $input = $('.Amount-input-a');
+    var $remove = $('.Amount-remove-a');
+    return {
+        init: function(){
+            $add.on('click', function(e){
+                e.preventDefault();
+                var $inputThis = $(this).siblings($input).filter($input);
+                var value = parseFloat($inputThis.val());
+                $inputThis.val( value + 1);
+            });
+            $remove.on('click', function(e){
+                e.preventDefault();
+                var $inputThis = $(this).siblings($input).filter($input);
+                var value = parseFloat($inputThis.val());
+                $inputThis.val(value>0?value - 1:0);
+            });
+        }
+    };
+};
 Amount().init();
 var Order = function(){
     var $next = $('.Order-next'),

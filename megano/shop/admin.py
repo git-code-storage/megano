@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 from mptt.admin import MPTTModelAdmin
 from .models import *
 
@@ -8,15 +9,6 @@ class CategoryAdmin(MPTTModelAdmin):
 
     list_display = ('name', )
     prepopulated_fields = {'slug': ('name',)}
-
-
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-
-    list_display = ('name', 'price', 'amount', 'category', 'is_limited', 'index', 'sold', 'is_active',)
-    prepopulated_fields = {'slug': ('name',)}
-    list_filter = ('category',)
-    search_fields = ('name',)
 
 
 @admin.register(Feedback)
@@ -47,12 +39,18 @@ class OrderItemAdmin(admin.ModelAdmin):
     readonly_fields = ('date_added',)
 
 
+class OrderItemInline(admin.StackedInline):
+    model = OrderItem
+    extra = 0
+
+
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'customer', 'date_of_creation', 'date_of_changing', 'complete',)
     list_filter = ('complete',)
     search_fields = ('id', 'customer', 'date_of_creation',)
     readonly_fields = ('date_of_creation', 'date_of_changing',)
+    inlines = [OrderItemInline]
 
 
 @admin.register(Delivery)
@@ -65,3 +63,56 @@ class DeliveryAdmin(admin.ModelAdmin):
 @admin.register(TypeOfDelivery)
 class TypeOfDeliveryAdmin(admin.ModelAdmin):
     list_display = ('type_of_delivery', 'min_order', 'cost', 'additional_cost',)
+
+
+@admin.register(ProductImage)
+class ProductImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'get_product_name',)
+    fieldsets = [[None, {'fields': ['product', 'get_image', 'image', ]}]]
+    readonly_fields = ('get_image',)
+
+    def get_product_name(self, obj):
+        return obj.product.name
+
+    def get_image(self, obj):
+        if obj.image.url:
+            return mark_safe(f'<img src={obj.image.url} width="20%">')
+
+    get_image.short_description = 'View'
+    get_product_name.short_description = 'Product'
+
+
+class ProductImageInline(admin.StackedInline):
+    model = ProductImage
+    extra = 1
+    fieldsets = [[None, {'fields': ['get_image', 'image', ]}]]
+    readonly_fields = ('get_image',)
+
+    def get_image(self, obj):
+        if obj.image.url:
+            return mark_safe(f'<img src={obj.image.url} width="20%">')
+
+    get_image.short_description = 'View'
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'price', 'amount', 'category', 'is_limited', 'index', 'is_active',)
+    list_filter = ('category', 'is_limited', 'is_active',)
+    fieldsets = (
+        ('Technical data', {'fields': ('name', 'slug', 'category', 'short_description', 'description', 'creation_date',
+                                       'update_date', 'get_big_image', 'image')}),
+        ('Commercial data', {'fields': ('price', 'amount', 'sold', 'index')}),
+        ('Status', {'fields': ('is_limited', 'is_active')}),
+    )
+
+    readonly_fields = ('creation_date', 'update_date', 'get_big_image',)
+    inlines = [ProductImageInline]
+    prepopulated_fields = {'slug': ('name',)}
+    search_fields = ('name',)
+
+    def get_big_image(self, obj):
+        if obj.image.url:
+            return mark_safe(f'<img src={obj.image.url} width="20%">')
+
+    get_big_image.short_description = 'Main view'

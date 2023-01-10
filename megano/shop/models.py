@@ -50,7 +50,8 @@ class Category(MPTTModel):
 class Product(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
-    description = RichTextField()
+    description = RichTextField(null=True, blank=True)
+    short_description = RichTextField(max_length=255, null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     amount = models.PositiveSmallIntegerField(default=0)
     creation_date = models.DateTimeField(auto_now_add=True)
@@ -76,6 +77,7 @@ class Product(models.Model):
             self.slug = slugify(self.name)
         return super().save(*args, **kwargs)
 
+
     @property
     def get_absolute_url(self):
         return reverse('product_detail', kwargs={'product_slug': self.slug})
@@ -87,6 +89,22 @@ class Product(models.Model):
         except:
             url = ''
         return url
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='product_images/', null=True, blank=True)
+
+    @property
+    def image_url(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
+
+    def __str__(self):
+        return self.product.name
 
 
 class Feedback(models.Model):
