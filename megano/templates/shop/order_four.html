@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Order registration
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="index.html">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Order registration</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section Section_column Section_columnRight Section_columnWide Order">
+      <div class="wrap">
+        <div class="Section-column">
+          <div class="Section-columnSection">
+            <header class="Section-header">
+              <strong class="Section-title">Filling progress
+              </strong>
+            </header>
+            <div class="Section-columnContent">
+              <ul class="menu menu_vt Order-navigate">
+                <li class="menu-item"><a class="menu-link" href="#step1">Step 1. User parameters</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#step2">Step 2. Delivery method</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#step3">Step 3. Payment method</a>
+                </li>
+                <li class="menu-item_ACTIVE menu-item"><a class="menu-link" href="#step4">Step 4. Order confirmation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="Section-content">
+          <form class="form" action="#" method="post">
+
+            <div class="Order-block Order-block_OPEN" id="step4">
+              <header class="Section-header Section-header_sm">
+                <h2 class="Section-title">Step 4. Order confirmation
+                </h2>
+              </header>
+              <!--+div.Order.-confirmation-->
+              <div class="Order-infoBlock">
+                <div class="Order-personal">
+                  <div class="row">
+                    <div class="row-block">
+                      <div class="Order-info">
+                        <div class="Order-infoType">Full name:
+                        </div>
+                        <div class="Order-infoContent">{{request.user.name}}
+                        </div>
+                      </div>
+                      <div class="Order-info">
+                        <div class="Order-infoType">Phone:
+                        </div>
+                        <div class="Order-infoContent">{{request.user.phone}}
+                        </div>
+                      </div>
+                      <div class="Order-info">
+                        <div class="Order-infoType">E-mail:
+                        </div>
+                        <div class="Order-infoContent">{{request.user.email}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="Order-info Order-info_delivery">
+                        <div class="Order-infoType">Delivery method:
+                        </div>
+                        <div class="Order-infoContent">{{ delivery.type_of_delivery }}
+                        </div>
+                      </div>
+                      <div class="Order-info">
+                        <div class="Order-infoType">City:
+                        </div>
+                        <div class="Order-infoContent">{{ delivery_address.city }}
+                        </div>
+                      </div>
+                      <div class="Order-info">
+                        <div class="Order-infoType">Address:
+                        </div>
+                        <div class="Order-infoContent">{{ delivery_address.address }}
+                        </div>
+                      </div>
+                      <div class="Order-info Order-info_pay">
+                        <div class="Order-infoType">Payment:
+                        </div>
+                        <div class="Order-infoContent">{% if payment.payment_way == "CARD" %}payment by card online{% else %}online from a random someone else's account{% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Cart Cart_order">
+                  {% if in_cart %}
+                    {% for item in in_cart %}
+                      <div class="Cart-product">
+                    <div class="Cart-block Cart-block_row">
+                      <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="#"><img class="Cart-img" src="{{ item.product.image_url }}" alt="{{ item.product.name }}"/></a>
+                      </div>
+                      <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'product_detail' item.product.slug %}">{{ item.product.name }}</a>
+                        <div class="Cart-desc">Артикул: {{item.product.id}}
+                        </div>
+                      </div>
+                      <div class="Cart-block Cart-block_price">
+                        <div class="Cart-price">{{ item.product.price }}$
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Cart-block Cart-block_row">
+                      <div class="Cart-block Cart-block_amount">{{ item.quantity }}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                {% endif %}
+
+                  <div class="Cart-total">
+                    <div class="Cart-block Cart-block_total">
+                      <strong class="Cart-title">Total:
+                      </strong><span class="Cart-price">{{ total }}$</span>
+                    </div>
+                    <div class="Cart-block">
+                      <a class="btn btn_success" href="{% url 'order_step_three' %}">Previous</a>
+                      <a class="btn btn_primary btn_lg" href="{% url 'payment' %}">Pay</a>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

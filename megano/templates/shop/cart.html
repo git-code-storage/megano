@@ -32,7 +32,7 @@
                 <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="#"><img class="Cart-img" src="{{ item.product.image_url }}" alt="{{ item.product.name }}"/></a>
                 </div>
                 <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'product_detail' item.product.slug %}">{{ item.product.name }}</a>
-                  <div class="Cart-desc">Артикул: {{item.product.id}}
+                  <div class="Cart-desc">Article number: {{item.product.id}}
                   </div>
                 </div>
                 <div class="Cart-block Cart-block_price">
@@ -72,7 +72,7 @@
                 <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="#"><img class="Cart-img" src="{{ item.0.image_url }}" alt="{{ item.0.name }}"/></a>
                 </div>
                 <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'product_detail' item.0.slug %}">{{ item.0.name }}</a>
-                  <div class="Cart-desc">Артикул: {{item.0.id}}
+                  <div class="Cart-desc">Article number: {{item.0.id}}
                   </div>
                 </div>
                 <div class="Cart-block Cart-block_price">
@@ -109,10 +109,10 @@
           {% if in_cart %}
             <div class="Cart-total">
             <div class="Cart-block Cart-block_total">
-              <strong class="Cart-title">Итого:
+              <strong class="Cart-title">Total:
               </strong><span class="Cart-price">{{ total }}$</span>
             </div>
-            <div class="Cart-block"><a class="btn btn_success btn_lg" href="order.html">Оформить заказ</a>
+            <div class="Cart-block"><a class="btn btn_success btn_lg" href="{% url 'order_step_one' %}">Order</a>
             </div>
           </div>
           {% endif %}

@@ -46,7 +46,7 @@ class CustomUserAdmin(UserAdmin):
 @admin.register(DeliveryAddress)
 class DeliveryAddressAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'city', 'street', 'bdg', 'appart')
+    list_display = ('user', 'city', 'address',)
     list_filter = ('city',)
-    search_fields = ('user', 'city', 'street',)
+    search_fields = ('user', 'city', 'address',)
     ordering = ('user',)

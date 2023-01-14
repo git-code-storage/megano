@@ -1,10 +1,9 @@
 import logging
-from django.contrib.auth import views, login
+from django.contrib.auth import views
+from django.shortcuts import render, redirect
 from datetime import datetime
 from shop.utils import get_total_cart_items
-from .forms import RegisterForm
-from django.shortcuts import render, redirect
-from .utils import add_cart_to_user
+from .utils import add_cart_to_user, registration_base
 
 # Create your views here.
 logger = logging.getLogger(__name__)
@@ -28,7 +27,8 @@ class LoginView(views.LoginView):
     def post(self, request, *args, **kwargs):
         form = self.get_form()
         if form.is_valid():
-            add_cart_to_user(request, form, 'LoginView.post')
+            email = form.cleaned_data.get('username')
+            add_cart_to_user(request, email, 'LoginView.post')
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
@@ -42,26 +42,9 @@ class LogoutView(views.LogoutView):
 
 
 def registration(request):
-
-    errors = None
-    total_cart_items, total_cost = get_total_cart_items(request)
-
-    if request.method == 'POST':
-        form = RegisterForm(request.POST, request.FILES)
-        if form.is_valid():
-            user = form.save()
-            add_cart_to_user(request, form, 'registration')
-            login(request, user)
-            return redirect('/')
-        else:
-            errors = form.errors
-            logger.info(f'[registration] - {datetime.now()} - Errors: {errors}')
-
-    context = {'errors': errors,
-               'total_cart_items': total_cart_items,
-               'total_cost': total_cost,
-               }
-
+    check_succsess, context = registration_base(request, 'user:registration')
+    if check_succsess:
+        return redirect('/')
     return render(request, 'user/register.html', context)
 
 

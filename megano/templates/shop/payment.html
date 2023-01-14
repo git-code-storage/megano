@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Payment procedure
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="index.html">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Payment procedure</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        <form class="form Payment" action="#" method="post">
+          {% csrf_token %}
+          <div class="Payment-card">
+            <div class="form-group">
+              <label class="form-label">CARD:
+              </label>
+              <input class="form-input Payment-bill" id="numero1" name="card" type="text" placeholder="9999 9999" data-mask="9999 9999" data-validate="require pay"/>
+            </div>
+          </div>
+          {% if payment.error_status %}
+          <div class="form-group">
+                    <div class="Profile-errors">
+                      <p></p>
+                        <h3>Payment unsuccess</h3>
+                        {{ payment.error_msg }}
+                    </div>
+                  </div>
+          {% endif %}
+          <div class="Payment-pay">
+            <button class="btn btn_primary" type="submit">Pay</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -139,7 +139,7 @@ class Payment(models.Model):
     date_of_update = models.DateTimeField(auto_now=True)
     error_msg = models.CharField(max_length=100, null=True, blank=True)
     error_status = models.BooleanField(default=False)
-    order = models.ForeignKey('Order', on_delete=models.RESTRICT, blank=True, null=True)
+    order = models.OneToOneField('Order', on_delete=models.RESTRICT, blank=True, null=True, unique=True)
 
     class Meta:
         db_table = 'payment'
@@ -201,7 +201,7 @@ class Order(models.Model):
 
 class Delivery(models.Model):
     address = models.ForeignKey(DeliveryAddress, on_delete=models.RESTRICT, blank=True, null=True)
-    order = models.ForeignKey(Order, on_delete=models.RESTRICT, blank=True, null=True)
+    order = models.OneToOneField(Order, on_delete=models.RESTRICT, blank=True, null=True, unique=True)
     comment = models.TextField()
     complete = models.BooleanField(default=False)
     type_of_delivery = models.ForeignKey('TypeOfDelivery', on_delete=models.RESTRICT, blank=True, null=True)

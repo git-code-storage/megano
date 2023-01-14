@@ -56,9 +56,8 @@ class CustomUser(AbstractUser):
 class DeliveryAddress(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='address')
     city = models.CharField(max_length=50, blank=True, null=True)
-    street = models.CharField(max_length=100, blank=True, null=True)
-    bdg = models.CharField(max_length=10, blank=True, null=True)
-    appart = models.CharField(max_length=10, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    default = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'delivery_address'

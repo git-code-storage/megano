@@ -60,6 +60,7 @@ coverage.xml
 # Images
 *.jpg
 *.png
+*.jpeg
 
 # Django stuff:
 *.log
