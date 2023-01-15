@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 
 
 class Category(MPTTModel):
+    is_active = models.BooleanField(default=True)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     icon = models.ImageField(upload_to='icon_category/', null=True, blank=True)
@@ -22,10 +23,6 @@ class Category(MPTTModel):
 
     def __str__(self):
         return self.name
-
-    # @property
-    # def get_absolute_url(self):
-    #     return reverse('product_by_category', kwargs={'category_slug': self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -140,6 +137,7 @@ class Payment(models.Model):
     error_msg = models.CharField(max_length=100, null=True, blank=True)
     error_status = models.BooleanField(default=False)
     order = models.OneToOneField('Order', on_delete=models.RESTRICT, blank=True, null=True, unique=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     class Meta:
         db_table = 'payment'
@@ -179,16 +177,11 @@ class Order(models.Model):
     complete = models.BooleanField(default=False)
 
     @property
-    def get_cart_total(self):
+    def get_cart_total_and_items(self):
         orderitems = self.orderitem_set.all()
-        total = sum([item.get_total for item in orderitems])
-        return total
-
-    @property
-    def get_cart_items(self):
-        orderitems = self.orderitem_set.all()
-        total = sum([item.quantity for item in orderitems])
-        return total
+        total_cost = sum([item.get_total for item in orderitems])
+        total_items = sum([item.quantity for item in orderitems])
+        return total_cost, total_items
 
     def __str__(self):
         return str(self.id)

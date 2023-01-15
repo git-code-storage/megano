@@ -3,6 +3,14 @@ from django.contrib.auth.admin import UserAdmin
 from django.utils.safestring import mark_safe
 from .models import CustomUser, DeliveryAddress
 
+@admin.register(DeliveryAddress)
+class DeliveryAddressAdmin(admin.ModelAdmin):
+
+    list_display = ('user', 'city', 'address',)
+    list_filter = ('city',)
+    search_fields = ('user', 'city', 'address',)
+    ordering = ('user',)
+
 
 class DeliveryAddressInline(admin.StackedInline):
     model = DeliveryAddress
@@ -42,11 +50,3 @@ class CustomUserAdmin(UserAdmin):
     get_small_avatar.short_description = 'Avatar view'
     get_big_avatar.short_description = 'Avatar view'
 
-
-@admin.register(DeliveryAddress)
-class DeliveryAddressAdmin(admin.ModelAdmin):
-
-    list_display = ('user', 'city', 'address',)
-    list_filter = ('city',)
-    search_fields = ('user', 'city', 'address',)
-    ordering = ('user',)

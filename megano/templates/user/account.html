@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="Middle Middle_top" xmlns="http://www.w3.org/1999/html">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Profile
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="index.html">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Profile</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section Section_column Section_columnLeft">
+      <div class="wrap">
+        <div class="Section-column">
+          <div class="Section-columnSection">
+            <header class="Section-header">
+              <strong class="Section-title">Navigation
+              </strong>
+            </header>
+            <div class="Section-columnContent">
+              <div class="NavigateProfile">
+                <ul class="menu menu_vt">
+                  <li class="menu-item_ACTIVE menu-item"><a class="menu-link" href="{% url 'account' %}">Account</a>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="{% url 'profile' %}">Profile</a>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="{% url 'history_order' %}">Order history</a>
+                  </li>
+                  <li class="menu-item"><a class="menu-link" href="{% url 'change_password' %}">Change password</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Section-content">
+          <div class="Account">
+            <div class="Account-group">
+              <div class="Account-column">
+                <div class="Account-avatar"><img src="{{ request.user.avatar_url }}" alt="card.jpg"/>
+                </div>
+              </div>
+              <div class="Account-column">
+                <div class="Account-name">{{ request.user.name }}
+                </div><a class="Account-editLink" href="{% url 'profile' %}">Edit profile</a>
+              </div>
+            </div>
+            <div class="Account-group">
+              <div class="Account-column Account-column_full">
+                {% if orders %}
+                    {% for order in orders %}
+                    <div class="Order Order_anons">
+                      <div class="Order-personal">
+                    <div class="row">
+                      <div class="row-block"><a class="Order-title" href="oneorder.html">Order&#32;<span class="Order-numberOrder">№{{ order.id }}</span>&#32;from&#32;<span class="Order-dateOrder">{{ order.date_of_creation|date:"d.m.Y"  }}</span></a>
+                        <div class="Account-editLink"><a href="historyorder.html">Order history</a>
+                        </div>
+                      </div>
+                      <div class="row-block">
+                        <div class="Order-info Order-info_delivery">
+                          <div class="Order-infoType">Type of delivery:
+                          </div>
+                          <div class="Order-infoContent">{{ order.delivery.type_of_delivery }}
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_pay">
+                          <div class="Order-infoType">Payment:
+                          </div>
+                          <div class="Order-infoContent">{{ order.payment.payment_way }}
+                          </div>
+                        </div>
+                        <div class="Order-info">
+                          <div class="Order-infoType">Total cost:
+                          </div>
+                          <div class="Order-infoContent">{{ order.payment.total }}$
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_status">
+                          <div class="Order-infoType">Payment status:
+                          </div>
+                          <div class="Order-infoContent">{% if order.payment.complete %}Paid{% else %}Not paid{% endif %}
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_status">
+                          <div class="Order-infoType">Delivery status:
+                          </div>
+                          <div class="Order-infoContent">{% if order.delivery.complete %}Delivered{% else %}Not delivered{% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                </br>
+                    {% endfor %}
+                {% else %}
+                  <p>Order list is empty</p>
+                {% endif %}
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

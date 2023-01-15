@@ -52,6 +52,14 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.email
 
+    @property
+    def avatar_url(self):
+        try:
+            url = self.avatar.url
+        except:
+            url = ''
+        return url
+
 
 class DeliveryAddress(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='address')
@@ -65,6 +73,6 @@ class DeliveryAddress(models.Model):
         verbose_name_plural = 'addresses'
 
     def __str__(self):
-        address = f'{self.city} {self.street} bdg: {self.bdg} app: {self.appart}'
+        address = f'{self.city} {self.address}'
         return address
 

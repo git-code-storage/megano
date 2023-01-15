@@ -3,3 +3,4 @@ Pillow==9.2
 django-mptt==0.14.0
 django-ckeditor==6.5.1
 django-filter==22.1
+django-debug-toolbar==3.8.1

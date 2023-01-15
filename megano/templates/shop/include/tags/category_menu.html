@@ -2,33 +2,33 @@
 <div class="CategoriesButton-content">
     {% recursetree categories %}
 
-            {% if node.is_root_node %}
+            {% if node.is_root_node and node.is_active %}
                 <div class="CategoriesButton-link"><a href="#">
             {% endif %}
 
-            {% if node.is_child_node and not node.is_leaf_node %}
+            {% if node.is_child_node and not node.is_leaf_node and node.is_active %}
                 <div class="CategoriesButton-link"><a href="#">
             {% endif %}
 
-            {% if node.is_child_node and node.is_leaf_node %}
+            {% if node.is_child_node and node.is_leaf_node and node.is_active  %}
                 <a class="CategoriesButton-link" href="{% url 'products_by_category' node.slug 'pop_asc' %}">
             {% endif %}
 
                <div class="CategoriesButton-icon"><img src="{% static 'img/icons/departments/1.svg' %}" alt="1.svg"/>
                   </div><span class="CategoriesButton-text">{{ node.name }}</span></a>
 
-            {% if not node.is_leaf_node %}
+            {% if not node.is_leaf_node and node.is_active %}
                 <a class="CategoriesButton-arrow" href="#"></a>
                 <div class="CategoriesButton-submenu">
                 {{ children }}
                 </div>
             {% endif %}
 
-            {% if node.is_child_node and not node.is_leaf_node %}
+            {% if node.is_child_node and not node.is_leaf_node and node.is_active %}
                 </div>
             {% endif %}
 
-            {% if node.is_root_node %}
+            {% if node.is_root_node and node.is_active %}
                 </div>
             {% endif %}
 

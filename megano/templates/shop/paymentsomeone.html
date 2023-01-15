@@ -28,6 +28,8 @@
               </label>
               <input class="form-input Payment-bill" id="numero1" name="card" type="text" placeholder="9999 9999" data-mask="9999 9999" data-validate="require pay"/>
             </div>
+            <div class="form-group"><a class="btn btn_success Payment-generate" href="#">Generate a random invoice</a>
+            </div>
           </div>
           {% if payment.error_status %}
           <div class="form-group">

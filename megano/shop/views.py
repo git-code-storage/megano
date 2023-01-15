@@ -1,4 +1,5 @@
 import logging
+
 from django.core.paginator import Paginator
 from django.urls import reverse
 from django.shortcuts import render, redirect
@@ -19,8 +20,9 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    items = Product.objects.select_related('category').filter(is_active=True).order_by('-index', '-sold')
-    q = Q(is_active=True) & Q(is_limited=True)
+    q = Q(is_active=True) & Q(amount__gt=0)
+    items = Product.objects.select_related('category').filter(q).order_by('-index', '-sold')
+    q = Q(is_active=True) & Q(amount__gt=0) & Q(is_limited=True)
     is_limited = Product.objects.select_related('category').filter(q).order_by('-index', '-sold')
     products = items[:4]
     products_hide_md = items[5:7]
@@ -120,7 +122,6 @@ def cart(request):
     if request.user.is_authenticated:
         order, created = Order.objects.get_or_create(customer=request.user, complete=False)
         in_cart = OrderItem.objects.select_related('product').filter(order=order)
-        total = order.get_cart_total
     else:
         in_cart = []
         if 'cart' in request.session:
@@ -134,7 +135,7 @@ def cart(request):
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     context['in_cart'] = in_cart
-    context['total'] = total
+    context['total'] = total_cost
 
     return render(request, 'shop/cart.html', context)
 
@@ -155,7 +156,7 @@ def products_by_category(request, category_slug, sort):
         return redirect(f'../../{category_slug}/{sort}/{filters}')
 
     # можно упростить
-    q = Q(is_active=True) & Q(category__slug=category_slug)
+    q = Q(is_active=True) & Q(amount__gt=0) & Q(category__slug=category_slug)
     if sort == 'cost_asc':
         ordering = 'price'
     elif sort == 'cost_desc':
@@ -234,9 +235,9 @@ class ProductDetailView(DetailView):
 
 def order_step_one(request):
 
-    check_succsess, context = registration_base(request, 'shop:oder_one_step')
+    check_succsess, context = registration_base(request, 'oder_one_step')
     if check_succsess:
-        return redirect(reverse('shop:oder_one_step'))
+        return redirect(reverse('oder_one_step'))
     return render(request, 'shop/order_one.html', context)
 
 
@@ -319,7 +320,7 @@ def order_step_four(request):
     total_cart_items, total_cost = get_total_cart_items(request)
     order = Order.objects.get(customer=request.user, complete=False)
     in_cart = OrderItem.objects.select_related('product').filter(order=order)
-    total = order.get_cart_total
+
     delivery = Delivery.objects.get(order=order)
     payment = Payment.objects.get(order=order)
     delivery_address = DeliveryAddress.objects.filter(user=request.user).last()
@@ -328,7 +329,7 @@ def order_step_four(request):
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     context['in_cart'] = in_cart
-    context['total'] = total
+    context['total'] = total_cost
     context['delivery'] = delivery
     context['payment'] = payment
     context['delivery_address'] = delivery_address
@@ -344,28 +345,33 @@ def payment(request):
     context['total_cost'] = total_cost
     context['payment'] = None
 
+    order = Order.objects.get(customer=request.user, complete=False)
+    payment = Payment.objects.get(order=order)
+
     if request.method == 'POST':
-        logger.info(f'POST')
         form = CardForm(request.POST)
         if form.is_valid():
-            logger.info(f'is_valid')
-            order = Order.objects.get(customer=request.user, complete=False)
-            payment = Payment.objects.get(order=order)
             try:
-                logger.info(f'card - {form.cleaned_data.get("card")}')
                 card = form.cleaned_data.get('card')
                 card = card[:4] + card[5:]
-                logger.info(f'card - {card}')
                 card = int(card)
-                logger.info(f'card_is_int - {isinstance(card, int)}')
             except:
                 payment.error_status = True
                 payment.error_msg = 'error converting the card number to an integer'
                 payment.save()
                 context['payment'] = payment
+                if payment.payment_way == 'ACNT':
+                    return render(request, 'shop/paymentsomeone.html', context)
                 return render(request, 'shop/payment.html', context)
             if (len(str(card)) == 8) and (card % 2 == 0):
                 with atomic():
+                    orderitems = OrderItem.objects.select_related('product').filter(order=order)
+                    for orderitem in orderitems:
+                        orderitem.price = orderitem.product.price
+                        product = Product.objects.get(slug=orderitem.product.slug)
+                        product.sold += orderitem.quantity
+                        orderitem.save()
+                        product.save()
                     order.complete = True
                     payment.complete = True
                     order.save()
@@ -380,9 +386,20 @@ def payment(request):
                     payment.error_msg = 'the card number is not even'
                     payment.save()
                 context['payment'] = payment
+                if payment.payment_way == 'ACNT':
+                    return render(request, 'shop/paymentsomeone.html', context)
                 return render(request, 'shop/payment.html', context)
-            return redirect('/')
-
+            return redirect(reverse('payment_procedure'))
+    if payment.payment_way == 'ACNT':
+        return render(request, 'shop/paymentsomeone.html', context)
     return render(request, 'shop/payment.html', context)
 
+
+@login_required
+def payment_procedure(request):
+    context = dict()
+    total_cart_items, total_cost = get_total_cart_items(request)
+    context['total_cart_items'] = total_cart_items
+    context['total_cost'] = total_cost
+    return render(request, 'shop/progressPayment.html', context)
 

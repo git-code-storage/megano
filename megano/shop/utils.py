@@ -5,8 +5,8 @@ def get_total_cart_items(request):
     if request.user.is_authenticated:
         customer = request.user
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
-        total_cart_items = order.get_cart_items
-        total_cost = order.get_cart_total
+        total_cost, total_cart_items = order.get_cart_total_and_items
+
     else:
         total_cart_items = 0
         total_cost = 0
