@@ -34,7 +34,7 @@ def registration_base(request, view):
 
     errors = None
     check_succsess = False
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
 
     if request.method == 'POST':
         form = RegisterForm(request.POST, request.FILES)

@@ -58,12 +58,15 @@
                 <img src="{{ product.image_url }}" alt="{{ product.name }}"/>
               </div>
               <div class="ProductCard-picts">
-                <a class="ProductCard-pict ProductCard-pict_ACTIVE" href="{% static '/img/content/home/bigGoods.png' %}">
-                  <img src="{% static '/img/content/home/bigGoods.png' %}" alt="{{ product.name }}"/></a>
-                <a class="ProductCard-pict" href="{% static '/img/content/home/slider.png">
-                  <img src="assets/img/content/home/slider.png" alt="{{ product.name }}"/></a>
-                <a class="ProductCard-pict" href="assets/img/content/home/videoca.png">
-                  <img src="assets/img/content/home/videoca.png" alt="{{ product.name }}"/></a>
+                <a class="ProductCard-pict ProductCard-pict_ACTIVE" href="{{ product.image_url }}">
+                  <img src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+                {% if product_pictures %}
+                {% for picture in product_pictures %}
+                  <a class="ProductCard-pict" href="{{ picture.image_url }}">
+                    <img src="{{ picture.image_url }}" alt="{{ product.name }}"/></a>
+                {% endfor %}
+                {% endif %}
+
               </div>
             </div>
             <div class="ProductCard-desc">

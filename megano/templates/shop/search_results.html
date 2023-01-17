@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Search results
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'index' %}">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Search results</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        {% if products %}
+                {% for product in products %}
+                  <div class="Cart-product">
+              <div class="Cart-block Cart-block_row">
+                <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="{% url 'product_detail' product.slug %}"><img class="Cart-img" src="{{ product.image_url }}" alt="{{ product.name }}"/></a>
+                </div>
+                <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                  <div class="Cart-desc">Article number: {{product.id}}
+                  </div>
+                </div>
+                <div class="Cart-block Cart-block_price">
+                  <div class="Cart-price">{{ product.price }}$
+                  </div>
+                </div>
+              </div>
+            </div>
+                {% endfor %}
+            {% else %}
+              <div class="Cart-block"><p>Nothing was found for your query</p>
+                </div>
+            {% endif %}
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}

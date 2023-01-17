@@ -2,14 +2,14 @@ import logging
 from django.contrib.auth import views, update_session_auth_hash
 from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
-from django.db.models import Prefetch
+from django.db.models import Prefetch, Q
 from datetime import datetime
 from shop.utils import get_total_cart_items
 from .utils import add_cart_to_user, registration_base
 from django.contrib import messages
 from .forms import ChangeForm, PassChangeForm
-from .models import CustomUser, DeliveryAddress
-from shop.models import Order, OrderItem, Product, Delivery, Payment, TypeOfDelivery
+from .models import CustomUser
+from shop.models import Order, OrderItem
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -26,7 +26,7 @@ class LoginView(views.LoginView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        total_cart_items, total_cost = get_total_cart_items(self.request)
+        total_cart_items, total_cost, order = get_total_cart_items(self.request)
         context['total_cart_items'] = total_cart_items
         context['total_cost'] = total_cost
         return context
@@ -58,7 +58,7 @@ def registration(request):
 @login_required
 def profile(request):
 
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context = dict()
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
@@ -85,7 +85,7 @@ def profile(request):
 @login_required
 def change_password(request):
 
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context = dict()
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
@@ -111,10 +111,15 @@ def change_password(request):
 
 @login_required
 def account(request):
+    q = Q(customer__email=request.user.email) & Q(complete=True)
     pr1 = Prefetch('orderitem_set', queryset=OrderItem.objects.select_related('product').all())
     orders = Order.objects.prefetch_related(pr1, 'delivery', 'payment')\
-        .filter(customer__email=request.user.email)
-    total_cart_items, total_cost = get_total_cart_items(request)
+        .filter(q).order_by('-date_of_changing')
+    total_cart_items, total_cost, order = get_total_cart_items(request)
+    q = Q(customer__email=request.user.email) & Q(complete=True)
+    pr1 = Prefetch('orderitem_set', queryset=OrderItem.objects.select_related('product').all())
+    orders = Order.objects.prefetch_related(pr1, 'delivery', 'payment') \
+        .filter(q).order_by('-date_of_changing')
     context = dict()
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
@@ -125,9 +130,14 @@ def account(request):
 
 @login_required
 def history_order(request):
-    total_cart_items, total_cost = get_total_cart_items(request)
+    q = Q(customer__email=request.user.email) & Q(complete=True)
+    pr1 = Prefetch('orderitem_set', queryset=OrderItem.objects.select_related('product').all())
+    orders = Order.objects.prefetch_related(pr1, 'delivery', 'payment') \
+        .filter(q).order_by('-date_of_changing')
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context = dict()
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
+    context['orders'] = orders
 
     return render(request, 'user/history_order.html', context)

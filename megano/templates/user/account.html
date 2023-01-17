@@ -61,8 +61,8 @@
                     <div class="Order Order_anons">
                       <div class="Order-personal">
                     <div class="row">
-                      <div class="row-block"><a class="Order-title" href="oneorder.html">Order&#32;<span class="Order-numberOrder">№{{ order.id }}</span>&#32;from&#32;<span class="Order-dateOrder">{{ order.date_of_creation|date:"d.m.Y"  }}</span></a>
-                        <div class="Account-editLink"><a href="historyorder.html">Order history</a>
+                      <div class="row-block"><a class="Order-title" href="{% url 'oneorder' order.id %}">Order&#32;<span class="Order-numberOrder">№{{ order.id }}</span>&#32;from&#32;<span class="Order-dateOrder">{{ order.date_of_creation|date:"d.m.Y"  }}</span></a>
+                        <div class="Account-editLink"><a href="{% url 'history_order' %}">Order history</a>
                         </div>
                       </div>
                       <div class="row-block">
@@ -81,7 +81,7 @@
                         <div class="Order-info">
                           <div class="Order-infoType">Total cost:
                           </div>
-                          <div class="Order-infoContent">{{ order.payment.total }}$
+                          <div class="Order-infoContent">{% if  order.total  > order.get_cart_total_and_items.0 %} {{ order.total }} {% else %} {{ order.get_cart_total_and_items.0 }} {% endif %}$
                           </div>
                         </div>
                         <div class="Order-info Order-info_status">

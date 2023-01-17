@@ -6,13 +6,14 @@ from django.shortcuts import render, redirect
 from django.db.models import Q, Min, Max
 from django.views.generic import DetailView
 from .utils import get_total_cart_items
-from .models import Product, Order, OrderItem, Category, Delivery, TypeOfDelivery, Payment
+from .models import Product, Order, OrderItem, Category, Delivery, TypeOfDelivery, Payment, ProductImage
 from user.models import DeliveryAddress
 from .filters import ProductFilter
 from .forms import DeliveryForm, ChoicePaymentForm, CardForm
 from user.utils import registration_base
 from django.contrib.auth.decorators import login_required
 from django.db.transaction import atomic
+from django.views.generic import ListView
 
 
 logger = logging.getLogger(__name__)
@@ -27,7 +28,7 @@ def index(request):
     products = items[:4]
     products_hide_md = items[5:7]
     products_hide_1450 = items[7:9]
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context = {
         'products': products,
         'products_hide_md': products_hide_md,
@@ -84,7 +85,6 @@ def remove_cart(request, product_slug):
                 request.session.modified = True
     else:
         product = Product.objects.get(slug=product_slug)
-        logger.info(f'product.name - {product.name}')
         order, created = Order.objects.get_or_create(customer=request.user, complete=False)
         orderitem = OrderItem.objects.get(
             product=product,
@@ -119,19 +119,19 @@ def remove_product_cart(request, product_slug):
 
 def cart(request):
     total = 0
+
     if request.user.is_authenticated:
-        order, created = Order.objects.get_or_create(customer=request.user, complete=False)
+        total_cart_items, total_cost, order = get_total_cart_items(request)
         in_cart = OrderItem.objects.select_related('product').filter(order=order)
     else:
         in_cart = []
         if 'cart' in request.session:
-            queryset = Product.objects.filter(slug__in=request.session['cart'].keys())
+            total_cart_items, total_cost, queryset = get_total_cart_items(request)
             for product in queryset:
                 in_cart.append((product, request.session['cart'][product.slug]))
                 total += product.price * request.session['cart'][product.slug]
 
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     context['in_cart'] = in_cart
@@ -190,7 +190,7 @@ def products_by_category(request, category_slug, sort):
     page = paginator.get_page(page_num)
 
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     context['sort'] = sort
@@ -227,9 +227,12 @@ class ProductDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
-        total_cart_items, total_cost = get_total_cart_items(self.request)
+        total_cart_items, total_cost, order = get_total_cart_items(self.request)
         context['total_cart_items'] = total_cart_items
         context['total_cost'] = total_cost
+        product = Product.objects.get(slug=self.kwargs.get("product_slug"))
+        product_pictures = ProductImage.objects.filter(product=product)[:7]
+        context['product_pictures'] = product_pictures
         return context
 
 
@@ -245,7 +248,7 @@ def order_step_one(request):
 def order_step_two(request):
 
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     if request.method == 'POST':
@@ -255,8 +258,6 @@ def order_step_two(request):
                 delivery = form.cleaned_data.get('delivery')
                 address = form.cleaned_data.get('address')
                 city = form.cleaned_data.get('city')
-                order, created = Order.objects.get_or_create(customer=request.user, complete=False)
-                order.save()
                 address, created = DeliveryAddress.objects.get_or_create(user=request.user, address=address, city=city)
                 address.save()
                 type_of_delivery = TypeOfDelivery.objects.get(type_of_delivery=delivery)
@@ -270,7 +271,6 @@ def order_step_two(request):
             return render(request, 'shop/order_two.html', context)
     else:
         form = DeliveryForm()
-        order, created = Order.objects.get_or_create(customer=request.user, complete=False)
         delivery, created = Delivery.objects.get_or_create(order=order, complete=False)
         if not created:
             if delivery.address:
@@ -288,7 +288,7 @@ def order_step_two(request):
 @login_required
 def order_step_three(request):
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     if request.method == 'POST':
@@ -308,7 +308,6 @@ def order_step_three(request):
             return render(request, 'shop/order_two.html', context)
     else:
         form = ChoicePaymentForm()
-        order, created = Order.objects.get_or_create(customer=request.user, complete=False)
         payment, created = Payment.objects.get_or_create(order=order, complete=False)
         context['payment_way'] = payment.payment_way
         context['form'] = form
@@ -317,12 +316,11 @@ def order_step_three(request):
 
 @login_required
 def order_step_four(request):
-    total_cart_items, total_cost = get_total_cart_items(request)
-    order = Order.objects.get(customer=request.user, complete=False)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     in_cart = OrderItem.objects.select_related('product').filter(order=order)
 
-    delivery = Delivery.objects.get(order=order)
-    payment = Payment.objects.get(order=order)
+    delivery = order.delivery
+    payment = order.payment
     delivery_address = DeliveryAddress.objects.filter(user=request.user).last()
 
     context = dict()
@@ -339,14 +337,14 @@ def order_step_four(request):
 
 @login_required
 def payment(request):
+
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
+    payment = order.payment
+
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     context['payment'] = None
-
-    order = Order.objects.get(customer=request.user, complete=False)
-    payment = Payment.objects.get(order=order)
 
     if request.method == 'POST':
         form = CardForm(request.POST)
@@ -372,6 +370,7 @@ def payment(request):
                         product.sold += orderitem.quantity
                         orderitem.save()
                         product.save()
+                    payment.total = total_cost
                     order.complete = True
                     payment.complete = True
                     order.save()
@@ -398,8 +397,46 @@ def payment(request):
 @login_required
 def payment_procedure(request):
     context = dict()
-    total_cart_items, total_cost = get_total_cart_items(request)
+    total_cart_items, total_cost, order = get_total_cart_items(request)
     context['total_cart_items'] = total_cart_items
     context['total_cost'] = total_cost
     return render(request, 'shop/progressPayment.html', context)
 
+
+@login_required
+def oneorder(request, pk):
+    total_cart_items, total_cost, order = get_total_cart_items(request)
+    order = Order.objects.prefetch_related('delivery', 'payment').get(pk=pk)
+    orderitems = OrderItem.objects.select_related('product').filter(order=order).order_by('product')
+    context = dict()
+    context['total_cart_items'] = total_cart_items
+    context['total_cost'] = total_cost
+    context['order'] = order
+    context['orderitems'] = orderitems
+    return render(request, 'shop/oneorder.html', context)
+
+
+class SearchResultsView(ListView):
+    model = Product
+    template_name = 'shop\search_results.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        query = self.request.GET.get('query')
+        queryset = Product.objects.filter(name__icontains=query)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super(SearchResultsView, self).get_context_data(**kwargs)
+        total_cart_items, total_cost, order = get_total_cart_items(self.request)
+        context['total_cart_items'] = total_cart_items
+        context['total_cost'] = total_cost
+        return context
+
+
+def about(request):
+    context = dict()
+    total_cart_items, total_cost, order = get_total_cart_items(request)
+    context['total_cart_items'] = total_cart_items
+    context['total_cost'] = total_cost
+    return render(request, 'shop/about.html', context)

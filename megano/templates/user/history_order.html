@@ -12,7 +12,7 @@
           <ul class="breadcrumbs Middle-breadcrumbs">
             <li class="breadcrumbs-item"><a href="index.html">home</a>
             </li>
-            <li class="breadcrumbs-item breadcrumbs-item_current"><span>ИProfile</span>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Profile</span>
             </li>
           </ul>
         </div>
@@ -45,114 +45,55 @@
         </div>
         <div class="Section-content">
           <div class="Orders">
-            <div class="Order Order_anons">
-              <div class="Order-personal">
-                <div class="row">
-                  <div class="row-block"><a class="Order-title" href="oneorder.html">Заказ&#32;<span class="Order-numberOrder">№200</span>&#32;от&#32;<span class="Order-dateOrder">21.07.2020</span></a>
-                  </div>
-                  <div class="row-block">
-                    <div class="Order-info Order-info_delivery">
-                      <div class="Order-infoType">Тип доставки:
+            {% if orders %}
+                    {% for order in orders %}
+                    <div class="Order Order_anons">
+                      <div class="Order-personal">
+                    <div class="row">
+                      <div class="row-block"><a class="Order-title" href="{% url 'oneorder' order.id %}">Order&#32;<span class="Order-numberOrder">№{{ order.id }}</span>&#32;from&#32;<span class="Order-dateOrder">{{ order.date_of_creation|date:"d.m.Y"  }}</span></a>
+                        <div class="Account-editLink"><a href="{% url 'history_order' %}">Order history</a>
+                        </div>
                       </div>
-                      <div class="Order-infoContent">Обычная доставка
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_pay">
-                      <div class="Order-infoType">Оплата:
-                      </div>
-                      <div class="Order-infoContent">Онлайн картой
-                      </div>
-                    </div>
-                    <div class="Order-info">
-                      <div class="Order-infoType">Общая стоимость:
-                      </div>
-                      <div class="Order-infoContent"><span class="Order-price">200.99$</span>
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_status">
-                      <div class="Order-infoType">Статус:
-                      </div>
-                      <div class="Order-infoContent">Не оплачен
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="Order Order_anons">
-              <div class="Order-personal">
-                <div class="row">
-                  <div class="row-block"><a class="Order-title" href="oneorder.html">Заказ&#32;<span class="Order-numberOrder">№199</span>&#32;от&#32;<span class="Order-dateOrder">20.07.2020</span></a>
-                  </div>
-                  <div class="row-block">
-                    <div class="Order-info Order-info_delivery">
-                      <div class="Order-infoType">Тип доставки:
-                      </div>
-                      <div class="Order-infoContent">Обычная доставка
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_pay">
-                      <div class="Order-infoType">Оплата:
-                      </div>
-                      <div class="Order-infoContent">Онлайн картой
-                      </div>
-                    </div>
-                    <div class="Order-info">
-                      <div class="Order-infoType">Общая стоимость:
-                      </div>
-                      <div class="Order-infoContent"><span class="Order-price">100.99$</span>
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_status">
-                      <div class="Order-infoType">Статус:
-                      </div>
-                      <div class="Order-infoContent">Оплачен
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_error">
-                      <div class="Order-infoType">Оплата не прошла:
-                      </div>
-                      <div class="Order-infoContent">Оплата не выполнена, т.к. вы подозреваетесь в нетолерантности
+                      <div class="row-block">
+                        <div class="Order-info Order-info_delivery">
+                          <div class="Order-infoType">Type of delivery:
+                          </div>
+                          <div class="Order-infoContent">{{ order.delivery.type_of_delivery }}
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_pay">
+                          <div class="Order-infoType">Payment:
+                          </div>
+                          <div class="Order-infoContent">{{ order.payment.payment_way }}
+                          </div>
+                        </div>
+                        <div class="Order-info">
+                          <div class="Order-infoType">Total cost:
+                          </div>
+                          <div class="Order-infoContent">{% if  order.total  > order.get_cart_total_and_items.0 %} {{ order.total }} {% else %} {{ order.get_cart_total_and_items.0 }} {% endif %}$
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_status">
+                          <div class="Order-infoType">Payment status:
+                          </div>
+                          <div class="Order-infoContent">{% if order.payment.complete %}Paid{% else %}Not paid{% endif %}
+                          </div>
+                        </div>
+                        <div class="Order-info Order-info_status">
+                          <div class="Order-infoType">Delivery status:
+                          </div>
+                          <div class="Order-infoContent">{% if order.delivery.complete %}Delivered{% else %}Not delivered{% endif %}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="Order Order_anons">
-              <div class="Order-personal">
-                <div class="row">
-                  <div class="row-block"><a class="Order-title" href="oneorder.html">Заказ&#32;<span class="Order-numberOrder">№194</span>&#32;от&#32;<span class="Order-dateOrder">01.07.2020</span></a>
-                  </div>
-                  <div class="row-block">
-                    <div class="Order-info Order-info_delivery">
-                      <div class="Order-infoType">Тип доставки:
-                      </div>
-                      <div class="Order-infoContent">Обычная доставка
-                      </div>
                     </div>
-                    <div class="Order-info Order-info_pay">
-                      <div class="Order-infoType">Оплата:
-                      </div>
-                      <div class="Order-infoContent">Онлайн картой
-                      </div>
-                    </div>
-                    <div class="Order-info">
-                      <div class="Order-infoType">Общая стоимость:
-                      </div>
-                      <div class="Order-infoContent"><span class="Order-price">20.00$</span>
-                      </div>
-                    </div>
-                    <div class="Order-info Order-info_status">
-                      <div class="Order-infoType">Статус:
-                      </div>
-                      <div class="Order-infoContent">Доставляется
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </br>
+                    {% endfor %}
+                {% else %}
+                  <p>Order list is empty</p>
+                {% endif %}
           </div>
         </div>
       </div>

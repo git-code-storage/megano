@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Order №{{ order.id }}
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="index.html">home</a>
+            </li>
+            <li class="breadcrumbs-item"><a href="historyorder.html">History order</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Order №{{ order.id }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        <div class="Section-content">
+          <div class="Orders">
+          </div>
+          <div class="Order">
+            <div class="Order-infoBlock">
+              <div class="Order-personal">
+                <div class="row">
+                  <div class="row-block">
+                    <div class="Order-info Order-info_date">
+                      <div class="Order-infoType">Date:
+                      </div>
+                      <div class="Order-infoContent">{{ order.date_of_creation|date:"d.m.Y"  }}
+                      </div>
+                    </div>
+                    <div class="Order-info">
+                      <div class="Order-infoType">Full name:
+                      </div>
+                      <div class="Order-infoContent">{{ request.user.name }}
+                      </div>
+                    </div>
+                    <div class="Order-info">
+                      <div class="Order-infoType">Phone:
+                      </div>
+                      <div class="Order-infoContent">{{ request.user.phone }}
+                      </div>
+                    </div>
+                    <div class="Order-info">
+                      <div class="Order-infoType">E-mail:
+                      </div>
+                      <div class="Order-infoContent">{{ request.user.email }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-block">
+                    <div class="Order-info Order-info_delivery">
+                      <div class="Order-infoType">Type of delivery:
+                      </div>
+                      <div class="Order-infoContent">{{ order.delivery.type_of_delivery }}
+                      </div>
+                    </div>
+                    <div class="Order-info">
+                      <div class="Order-infoType">City:
+                      </div>
+                      <div class="Order-infoContent">{{ order.delivery.address.city }}
+                      </div>
+                    </div>
+                    <div class="Order-info">
+                      <div class="Order-infoType">Address:
+                      </div>
+                      <div class="Order-infoContent">{{ order.delivery.address.address }}
+                      </div>
+                    </div>
+                    <div class="Order-info Order-info_pay">
+                      <div class="Order-infoType">Payment:
+                      </div>
+                      <div class="Order-infoContent">{{ order.payment.payment_way }}
+                      </div>
+                    </div>
+                    <div class="Order-info Order-info_status">
+                      <div class="Order-infoType">Payment status:
+                      </div>
+                      <div class="Order-infoContent">{% if order.payment.complete %}Paid{% else %}Not paid{% endif %}
+                      </div>
+                    </div>
+                    <div class="Order-info Order-info_status">
+                      <div class="Order-infoType">Delivery status:
+                      </div>
+                      <div class="Order-infoContent">{% if order.delivery.complete %}Delivered{% else %}Not delivered{% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Cart Cart_order">
+                {% for item in orderitems %}
+                <div class="Cart-product">
+                  <div class="Cart-block Cart-block_row">
+                    <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="{{ item.product.get_absolute_url }}"><img class="Cart-img" src="{{ item.product.image_url }}" alt="card.jpg"/></a>
+                    </div>
+                    <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a>
+                      <div class="Cart-desc">Article number: {{ item.product.id }}
+                      </div>
+                    </div>
+                    <div class="Cart-block Cart-block_price">
+                      <div class="Cart-price">{{ item.price }}$
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Cart-block Cart-block_row">
+                  
+                    <div class="Cart-block Cart-block_amount">{{ item.quantity }} pc.
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="Cart-total">
+                  <div class="Cart-block Cart-block_total">
+                    <strong class="Cart-title">Total:<span class="Cart-price">{% if  order.total  > order.get_cart_total_and_items.0 %} {{ order.total }} {% else %} {{ order.get_cart_total_and_items.0 }} {% endif %}$</span>
+                    </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
