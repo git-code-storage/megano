@@ -8,7 +8,10 @@ def get_total_cart_items(request):
     if request.user.is_authenticated:
         customer = request.user
         order, created = Order.objects.select_related('payment').get_or_create(customer=customer, complete=False)
-        delivery = Delivery.objects.get_or_create(order=order, complete=False)
+        delivery, created = Delivery.objects.get_or_create(order=order, complete=False)
+        if created:
+            delivery.type_of_delivery = TypeOfDelivery.objects.get(pk=1)
+            delivery.save()
         total_cost, total_cart_items = order.get_cart_total_and_items
         order.save()
 
