@@ -1,0 +1,3475 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-12-31T02:56:06.723Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Phone number\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-12-31T03:29:42.976Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-12-31T03:48:34.072Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-12-31T03:50:36.624Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-12-31T04:17:42.373Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-12-31T04:19:05.540Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-12-31T04:25:37.718Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "mvv@ya.ru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-12-31T04:28:49.112Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "mvv@ya.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-12-31T07:28:34.344Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Pushkino Prosvyasheniya bdg: 10c2 app: 331",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-12-31T08:12:46.747Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "laptops and computers",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-12-31T08:13:08.702Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "laptops",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-12-31T08:15:30.335Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "smartphones and gadgets",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-12-31T08:15:48.007Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "smartphones",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-12-31T08:16:46.992Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "PC accessories",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-12-31T08:17:20.284Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-12-31T13:26:04.735Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "NORMAL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-12-31T13:26:23.136Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "EXPRESS",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-12-31T18:39:07.026Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Ноутбук Lenovo V15 G2 ITL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-12-31T18:43:44.530Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Ноутбук Huawei MateBook D 16 RLEF-X",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-12-31T18:46:54.135Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Ноутбук Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-12-31T18:49:36.253Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Ноутбук Lenovo V15 G2 ITL",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-12-31T19:08:35.009Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Ноутбук Digma EVE 15 P417",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-12-31T19:36:08.558Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Ноутбук CHUWI Corebook X 14/8/256",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-12-31T19:37:10.322Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "Ноутбук MSI Modern 15 A11MU-1064XRU",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-12-31T19:39:11.413Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Ноутбук Apple MacBook Pro 14.2\"",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-12-31T19:39:34.922Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-12-31T19:39:42.656Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Apple MacBook Pro 14.2\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-12-31T19:39:53.607Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "CHUWI Corebook X 14/8/256",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-12-31T19:40:01.584Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Digma EVE 15 P417",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-12-31T19:40:09.401Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Huawei MateBook D 16 RLEF-X",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-12-31T19:40:16.876Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Huawei MateBook D 16 RLEF-X",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-12-31T19:40:24.041Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Lenovo V15 G2 ITL",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2022-12-31T19:40:32.552Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "MSI Modern 15 A11MU-1064XRU",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Slug\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2022-12-31T19:41:30.775Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "MSI CreatorPro Z17 A12UMST-260RU, 17\"",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2022-12-31T19:43:03.142Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "HIPER Workbook N1567",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2022-12-31T19:44:16.225Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Apple MacBook Air A2337",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-01-01T07:45:44.695Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-01-01T07:47:17.848Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-01-01T07:48:21.583Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "MSI NVIDIA GeForce RTX 4090",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-01-01T07:50:26.368Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090, GV-N4090WF3-24GD, 24ГБ, GDDR6X, Ret",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-01-01T07:51:28.790Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090, PA-RTX4090 GAMEROCK OC, 24ГБ, GDDR6X, OC, Ret [ned4090s19sb-1020g]",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-01-01T07:52:46.675Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "Palit NVIDIA GeForce RTX 2060SUPER, PA-RTX2060SUPER DUAL 8G no LED, 8ГБ, GDDR6, Ret [ne6206s018p2-11",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-01-01T07:54:11.925Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "Palit NVIDIA GeForce RTX 3050, PA-RTX3050 DUAL, 8ГБ, GDDR6, Ret [ne63050019p1-190ad]",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-01-01T07:55:05.621Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-01-01T07:56:19.742Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "19",
+        "object_repr": "Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G, 8ГБ, GDDR6X, Ret [ned307t019p2-1046a]",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-01-01T08:03:02.677Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "20",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 3060Ti, GV-N306TGAMING OC-8GD 2.0 LHR, 8ГБ, GDDR6, OC, LHR, Ret",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-01-01T08:07:14.267Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "21",
+        "object_repr": "Huawei Nova Y70 4/128Gb, голубой перламутр",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-01-01T08:08:13.738Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "22",
+        "object_repr": "REALME 8 6/128Gb, черный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-01-01T08:09:05.089Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Xiaomi Redmi 9A 32Gb, серый",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-01-01T08:09:08.119Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Xiaomi Redmi 9A 32Gb, серый",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-01-01T08:10:01.233Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-01-01T08:10:18.777Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Xiaomi Redmi 9A 32Gb, серый",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-01-01T08:11:34.994Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "25",
+        "object_repr": "Samsung Galaxy A33 5G 8/128Gb, SM-A336E, черный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-01-01T08:15:50.872Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-01-01T08:16:14.581Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Apple MacBook Air A2337",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-01-01T08:16:50.075Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Apple MacBook Pro 14.2\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-01-01T08:17:13.177Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-01-01T08:17:34.518Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "CHUWI Corebook X 14/8/256",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-01-01T08:17:54.832Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Digma EVE 15 P417",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-01-01T08:18:12.434Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "20",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 3060Ti, GV-N306TGAMING OC-8GD 2.0 LHR, 8ГБ, GDDR6, OC, LHR, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-01-01T08:18:29.354Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-01-01T08:18:54.282Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090, GV-N4090WF3-24GD, 24ГБ, GDDR6X, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-01-01T08:19:11.562Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "HIPER Workbook N1567",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-01-01T08:19:26.705Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Huawei MateBook D 16 RLEF-X",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-01-01T08:19:45.298Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "21",
+        "object_repr": "Huawei Nova Y70 4/128Gb, голубой перламутр",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-01-01T08:20:02.602Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Lenovo V15 G2 ITL",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-01-01T08:20:16.913Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "MSI CreatorPro Z17 A12UMST-260RU, 17\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-01-01T08:20:34.917Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "MSI Modern 15 A11MU-1064XRU",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-01-01T08:20:53.896Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-01-01T08:21:13.235Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "MSI NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-01-01T08:21:32.223Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "Palit NVIDIA GeForce RTX 2060SUPER, PA-RTX2060SUPER DUAL 8G no LED, 8ГБ, GDDR6, Ret [ne6206s018p2-11",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-01-01T08:21:47.793Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "Palit NVIDIA GeForce RTX 3050, PA-RTX3050 DUAL, 8ГБ, GDDR6, Ret [ne63050019p1-190ad]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-01-01T08:22:04.929Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "19",
+        "object_repr": "Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G, 8ГБ, GDDR6X, Ret [ned307t019p2-1046a]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-01-01T08:22:23.819Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-01-01T08:22:39.467Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090, PA-RTX4090 GAMEROCK OC, 24ГБ, GDDR6X, OC, Ret [ned4090s19sb-1020g]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-01-01T08:22:56.333Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "22",
+        "object_repr": "REALME 8 6/128Gb, черный",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-01-01T08:23:11.223Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "25",
+        "object_repr": "Samsung Galaxy A33 5G 8/128Gb, SM-A336E, черный",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-01-01T08:23:28.561Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Xiaomi Redmi 9A 32Gb, серый",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Index\", \"Sold\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-01-01T09:03:03.881Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Apple MacBook Pro 14.2\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-01-01T09:03:17.567Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-01-01T09:03:24.912Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090, PA-RTX4090 GAMEROCK OC, 24ГБ, GDDR6X, OC, Ret [ned4090s19sb-1020g]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-01-01T09:03:31.304Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-01-01T10:39:49.614Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-01-01T10:40:47.291Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-01-01T10:40:56.193Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-01-01T10:42:01.978Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-01-01T16:47:56.589Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-01-01T16:48:32.237Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Apple MacBook Air A2337",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-01-01T16:51:13.685Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "Apple MacBook Pro 14.2\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-01-01T16:52:09.686Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "24",
+        "object_repr": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-01-01T16:52:44.164Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "CHUWI Corebook X 14/8/256",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-01-01T16:53:32.013Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Digma EVE 15 P417",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-01-01T16:54:14.405Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "20",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 3060Ti, GV-N306TGAMING OC-8GD 2.0 LHR, 8ГБ, GDDR6, OC, LHR, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-01-01T16:56:19.620Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-01-01T16:56:34.170Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-01-01T16:56:43.358Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "14",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090, GV-N4090WF3-24GD, 24ГБ, GDDR6X, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-01-01T16:57:11.068Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "HIPER Workbook N1567",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-01-01T16:58:15.002Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Huawei MateBook D 16 RLEF-X",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-01-01T16:58:50.156Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "21",
+        "object_repr": "Huawei Nova Y70 4/128Gb, голубой перламутр",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-01-01T17:00:18.618Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Lenovo V15 G2 ITL",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-01-01T17:01:45.321Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "MSI CreatorPro Z17 A12UMST-260RU, 17\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-01-01T17:02:50.081Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "MSI Modern 15 A11MU-1064XRU",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-01-01T17:03:47.590Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-01-01T17:04:29.376Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "MSI NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-01-01T17:05:07.869Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "16",
+        "object_repr": "Palit NVIDIA GeForce RTX 2060SUPER, PA-RTX2060SUPER DUAL 8G no LED, 8ГБ, GDDR6, Ret [ne6206s018p2-11",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-01-01T17:05:38.609Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "17",
+        "object_repr": "Palit NVIDIA GeForce RTX 3050, PA-RTX3050 DUAL, 8ГБ, GDDR6, Ret [ne63050019p1-190ad]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-01-01T17:06:33.743Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "19",
+        "object_repr": "Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G, 8ГБ, GDDR6X, Ret [ned307t019p2-1046a]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-01-01T17:07:14.874Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-01-01T17:07:48.465Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "15",
+        "object_repr": "Palit NVIDIA GeForce RTX 4090, PA-RTX4090 GAMEROCK OC, 24ГБ, GDDR6X, OC, Ret [ned4090s19sb-1020g]",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-01-01T17:08:18.680Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "22",
+        "object_repr": "REALME 8 6/128Gb, черный",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-01-01T17:09:55.672Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "25",
+        "object_repr": "Samsung Galaxy A33 5G 8/128Gb, SM-A336E, черный",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-01-01T17:10:31.098Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "23",
+        "object_repr": "Xiaomi Redmi 9A 32Gb, серый",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-01-01T19:44:26.746Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Price\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-01-01T19:49:43.774Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-01-01T19:53:26.768Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-01-01T19:55:21.801Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2023-01-01T19:55:49.022Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "Acer Aspire 3 A315-23-R5B8",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2023-01-02T18:27:07.286Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Parent\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2023-01-02T18:44:38.352Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Parent\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2023-01-02T18:59:43.559Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Parent\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2023-01-06T09:18:11.229Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Complete\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2023-01-06T12:48:53.189Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2023-01-06T12:48:53.205Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2023-01-06T12:49:13.791Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "8",
+        "object_repr": "send@test.test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2023-01-06T12:49:13.807Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "7",
+        "object_repr": "test@megano.ru",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2023-01-06T12:55:17.703Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2023-01-06T12:55:33.117Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "9",
+        "object_repr": "send@test.test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2023-01-08T14:37:33.842Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Amount\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2023-01-09T14:46:27.431Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "23",
+        "object_repr": "23",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2023-01-09T14:46:39.787Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "22",
+        "object_repr": "22",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2023-01-09T14:46:39.794Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "20",
+        "object_repr": "20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2023-01-09T14:46:39.798Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "19",
+        "object_repr": "19",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2023-01-09T14:46:39.802Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "18",
+        "object_repr": "18",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2023-01-09T17:28:07.384Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Digma EVE 15 P417",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Is limited\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2023-01-10T07:33:26.455Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "10",
+        "object_repr": "Apple MacBook Air A2337",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"ProductImage object (1)\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2023-01-14T07:03:34.762Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "mishustin.vadim@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2023-01-15T08:31:31.380Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Super",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2023-01-15T08:38:31.830Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Super",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2023-01-15T08:41:59.544Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "PC accessories",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2023-01-17T17:07:40.526Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "EXPRESS",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Min order\", \"Cost\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2023-01-21T05:02:08.110Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Is active\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2023-01-21T05:03:27.296Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "18",
+        "object_repr": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2023-01-21T05:06:31.290Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "smartphones",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is favourites\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2023-01-21T05:06:37.130Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is favourites\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2023-01-21T05:06:51.063Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "laptops",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Is favourites\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2023-01-21T05:07:12.075Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "laptops",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2023-01-21T05:07:24.226Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "smartphones",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2023-01-21T05:10:51.659Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "video cards",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2023-01-21T05:10:59.215Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "laptops",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2023-01-21T05:11:09.141Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "smartphones",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Icon\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2023-01-21T08:16:09.513Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Lenovo V15 G2 ITL",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add address",
+        "content_type": 7,
+        "codename": "add_deliveryaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change address",
+        "content_type": 7,
+        "codename": "change_deliveryaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete address",
+        "content_type": 7,
+        "codename": "delete_deliveryaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view address",
+        "content_type": 7,
+        "codename": "view_deliveryaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add category",
+        "content_type": 8,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change category",
+        "content_type": 8,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete category",
+        "content_type": 8,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view category",
+        "content_type": 8,
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add good",
+        "content_type": 9,
+        "codename": "add_good"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change good",
+        "content_type": 9,
+        "codename": "change_good"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete good",
+        "content_type": 9,
+        "codename": "delete_good"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view good",
+        "content_type": 9,
+        "codename": "view_good"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add order",
+        "content_type": 10,
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change order",
+        "content_type": 10,
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete order",
+        "content_type": 10,
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view order",
+        "content_type": 10,
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add type_of_delivery",
+        "content_type": 11,
+        "codename": "add_typeofdelivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change type_of_delivery",
+        "content_type": 11,
+        "codename": "change_typeofdelivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete type_of_delivery",
+        "content_type": 11,
+        "codename": "delete_typeofdelivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view type_of_delivery",
+        "content_type": 11,
+        "codename": "view_typeofdelivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add payment",
+        "content_type": 12,
+        "codename": "add_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change payment",
+        "content_type": 12,
+        "codename": "change_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete payment",
+        "content_type": 12,
+        "codename": "delete_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view payment",
+        "content_type": 12,
+        "codename": "view_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add orderitem",
+        "content_type": 13,
+        "codename": "add_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change orderitem",
+        "content_type": 13,
+        "codename": "change_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete orderitem",
+        "content_type": 13,
+        "codename": "delete_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view orderitem",
+        "content_type": 13,
+        "codename": "view_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add feedback",
+        "content_type": 14,
+        "codename": "add_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change feedback",
+        "content_type": 14,
+        "codename": "change_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete feedback",
+        "content_type": 14,
+        "codename": "delete_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view feedback",
+        "content_type": 14,
+        "codename": "view_feedback"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add delivery",
+        "content_type": 15,
+        "codename": "add_delivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change delivery",
+        "content_type": 15,
+        "codename": "change_delivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete delivery",
+        "content_type": 15,
+        "codename": "delete_delivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view delivery",
+        "content_type": 15,
+        "codename": "view_delivery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add product",
+        "content_type": 9,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change product",
+        "content_type": 9,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete product",
+        "content_type": 9,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view product",
+        "content_type": 9,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add product image",
+        "content_type": 16,
+        "codename": "add_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change product image",
+        "content_type": 16,
+        "codename": "change_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete product image",
+        "content_type": 16,
+        "codename": "delete_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view product image",
+        "content_type": 16,
+        "codename": "view_productimage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "user",
+        "model": "customuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "user",
+        "model": "deliveryaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "shop",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "shop",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "shop",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "shop",
+        "model": "typeofdelivery"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "shop",
+        "model": "payment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "shop",
+        "model": "orderitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "shop",
+        "model": "feedback"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "shop",
+        "model": "delivery"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "shop",
+        "model": "productimage"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cm8ur7ciyic00crqpaz5g40tdlxtzigv",
+    "fields": {
+        "session_data": "e30:1pDlEo:FOZpUuCSFVsPYrWED8JHMHihB-FcMHp6y_O9dZGg1_8",
+        "expire_date": "2023-01-20T11:50:18.145Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cy6xs3iiqnx9luocr3zrc04jp196r6g7",
+    "fields": {
+        "session_data": "e30:1pDl8L:hPwds0kQkd6TQBP9fFccnnTFY11YptKQp6AZTaljWBA",
+        "expire_date": "2023-01-20T11:43:37.668Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kswdo6yrhs24o9liwg4dflif0kr19lcu",
+    "fields": {
+        "session_data": "e30:1pDlGO:AdJU4SECh_Et0rV2cDCnWoHQG6bMr9Tv951p83L1JrY",
+        "expire_date": "2023-01-20T11:51:56.820Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ohrh0hgea1icr1ogd1vw85e7w5kqwtaw",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBgylhcuu8ZyAwDtmpoUtqV8e7apAvd_vfef6lI2zrGreUlTqIuyqrT78aUHrnuQO5Ub7NOc12XifWu6IM2PcySn9fD_TsYqY3fuvQmBZEesstnD-gLQC6IFrqA6JjEADOVHjGIs9wZs8vsU-g8WFbvD-C8N6c:1pJ60a:fE59BxyKo43EeiuNxwmteIH-VO6C9hBdc5pBoPMQGvg",
+        "expire_date": "2023-02-04T05:01:40.192Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vabju136lq1qql9g5wuyuj496b5iup6g",
+    "fields": {
+        "session_data": "e30:1pDlCa:93qmJMee_R9u8MYtWhQ0XGU_KRXxD32XXp3_LS4tRjE",
+        "expire_date": "2023-01-20T11:48:00.884Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "w2wwo4hfk8ooldgl1j4l93p3dqmqvrfg",
+    "fields": {
+        "session_data": "eyJjYXJ0Ijp7Im1zaS1jcmVhdG9ycHJvLXoxNy1hMTJ1bXN0LTI2MHJ1LTE3IjoxfX0:1pGdrh:w1TvzK5pXvleUhJUExadceOxn1F4mpNjI91MwGFolZ8",
+        "expire_date": "2023-01-28T10:34:21.751Z"
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$KBr6fGsvGvpieZ61cCQMIZ$glRJ18QiKA2XiwA2nrGfzX6tIrDAGenWewhC4owTUjY=",
+        "last_login": "2023-01-21T05:01:40.125Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-12-30T17:54:51.817Z",
+        "email": "mishustin.vadim@yandex.ru",
+        "phone": "+79778141220",
+        "name": "Вадим Мишустин",
+        "date_of_registration": "2022-12-31T03:26:46.255Z",
+        "avatar": "avatars/40-20211209_171121_dYBLPvd.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$bppyuJmvFkmdj8qeBTD7ef$Q5lnKvQz9kWOAuUbG/SJDEBK0llYa1TM280OBYZFXE4=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-12-31T04:25:37.451Z",
+        "email": "mvv@ya.ru",
+        "phone": "+79280097575",
+        "name": null,
+        "date_of_registration": "2022-12-31T04:25:37.710Z",
+        "avatar": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$35DsGL6NcZgVfFVWsbMv19$pvUyWkZ7YdE6dYEVAyNEhZgbBuwHHOngACIHEBoOD80=",
+        "last_login": "2023-01-06T13:03:57.835Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-06T13:03:57.658Z",
+        "email": "send@test.test",
+        "phone": "+70000000000",
+        "name": "Моя пицца",
+        "date_of_registration": "2023-01-06T13:03:57.821Z",
+        "avatar": "avatars/40-20211209_171121.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$Eab3NWtZ1l2vyEYTlM23O0$KyY9TlUXmkO6imCke5qmsnMRLGK5uIpyXBeCqGJdsNw=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-06T14:03:37.272Z",
+        "email": "megano@test.test",
+        "phone": "+70000000001",
+        "name": "Test",
+        "date_of_registration": "2023-01-06T14:03:37.492Z",
+        "avatar": "avatars/1834965_v01_b.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$HSXZm0uxsgExCw0qANCsI9$sORp206zQ+TYswJjgk+w3TJTLgA7T+Cjzyl8jR/IY4c=",
+        "last_login": "2023-01-06T14:11:59.647Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-06T14:11:59.448Z",
+        "email": "send5@test.test",
+        "phone": "+70000000050",
+        "name": "sdaf",
+        "date_of_registration": "2023-01-06T14:11:59.607Z",
+        "avatar": "avatars/no_avatar_image.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 17,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ZzxGI0YTNVdQwrkmqUKym4$s8njKnsD9h8VsYBlEnCGFAUIz/QWCDM3mH01o5jRkHw=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-14T11:32:43.125Z",
+        "email": "mishustin.vadim@yandeww2.ru",
+        "phone": "+70000000002",
+        "name": "Иванов Иван Иванович",
+        "date_of_registration": "2023-01-14T11:32:43.297Z",
+        "avatar": "avatars/no_avatar_image.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 18,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$jXr8I98qYsWItH0mfJ81PS$AQj5Euc3NVZ+sfJhz0S3mgKbCTwvViANJD3QTs7PCUY=",
+        "last_login": "2023-01-14T11:38:46.002Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-14T11:38:45.791Z",
+        "email": "mishustin.vadim@yandeww3.ru",
+        "phone": "+70000000003",
+        "name": "Иванов Иван Иванович",
+        "date_of_registration": "2023-01-14T11:38:45.961Z",
+        "avatar": "avatars/no_avatar_image.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.deliveryaddress",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "city": "Пушкино",
+        "address": "Просвещения",
+        "default": false
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+        "is_active": true,
+        "name": "laptops and computers",
+        "slug": "laptops_and_computers",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": null,
+        "lft": 1,
+        "rght": 8,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+        "is_active": true,
+        "name": "laptops",
+        "slug": "laptops",
+        "icon": "icon_category/laptop.png",
+        "image": "",
+        "is_favourites": true,
+        "parent": 1,
+        "lft": 4,
+        "rght": 5,
+        "tree_id": 2,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+        "is_active": true,
+        "name": "smartphones and gadgets",
+        "slug": "smartphones_and_gadgets",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+        "is_active": true,
+        "name": "smartphones",
+        "slug": "smartphones",
+        "icon": "icon_category/smartphone.png",
+        "image": "",
+        "is_favourites": true,
+        "parent": 3,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 3,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 5,
+    "fields": {
+        "is_active": false,
+        "name": "PC accessories",
+        "slug": "PC_accessories",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": 1,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 2,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 6,
+    "fields": {
+        "is_active": true,
+        "name": "video cards",
+        "slug": "video_cards",
+        "icon": "icon_category/video-adapters.png",
+        "image": "",
+        "is_favourites": true,
+        "parent": 1,
+        "lft": 6,
+        "rght": 7,
+        "tree_id": 2,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 7,
+    "fields": {
+        "is_active": false,
+        "name": "Super",
+        "slug": "super",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+        "name": "Huawei MateBook D 16 RLEF-X",
+        "slug": "huawei-matebook-d-16-rlef-x",
+        "description": "Ноутбук HUAWEI MateBook D 16 RLEF-X i7-12700H работает на базе четырехъядерного процессора Core i7 от Intel. Его частота достигает 2,4 ГГц, что обеспечивает бесперебойное функционирование без зависаний вне зависимости от интенсивности нагрузки. Объем оперативной памяти равен 16 Гб, а жесткого диска типа SSD — 512 Гб. Предустановлена ОС Windows 11.\r\n\r\nДисплей диагональю 16\" оснащен IPS-матрицей. Он транслирует изображение с разрешением 1920 x 1200 пикс. За высокое качество графики отвечает контроллер Iris Graphics. Доступна поддержка беспроводного соединения через Bluetooth и Wi-Fi. Для подключения периферийного оборудования предусмотрены интерфейсы HDMI, 3,5 мм и USB. Корпус выполнен из износостойкого и прочного металла. Его габариты — 18,4 х 356,7 х 248,7 мм. Устройство весит 1,71 кг.",
+        "short_description": null,
+        "price": "1333.33",
+        "amount": 5,
+        "creation_date": "2022-12-31T18:43:44.526Z",
+        "update_date": "2023-01-01T16:58:15.000Z",
+        "image": "goods/1774284_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "7.2",
+        "sold": 42,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+        "name": "Acer Aspire 3 A315-23-R5B8",
+        "slug": "acer-aspire-3-a315-23-r5b8",
+        "description": "<p>Широкому кругу пользователей адресован ноутбук ACER Aspire 3 A315-23-R5B8. Его возможности смогут по достоинству оценить представители бизнеса, студенты, обычные пользователи, геймеры. Характеризуется высокой производительностью, которая достигается за счет четырехъядерного процессора AMD Ryzen 5 3500U. На экране ноутбука ACER Aspire 3 A315-23-R5B8 диагональю 15.6 дюйма с разрешением 1920х1080 отображается качественное, четкое изображение. Светодиодная подсветка дисплея повышает эффективность работы в ночное время. Для хранения контента предусмотрено 1000 Гб памяти на жестком диске. Модули Wi-Fi и Bluetooth обеспечивают возможность соединения с сетью и быструю передачу данных, предусмотрены веб-камера и встроенный микрофон. Для подключения сторонних источников информации используются порты USB 2.0, USB 3.0, для подключения внешних устройств есть разъем HDMI.</p>\r\n\r\n\r\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>gtyrt</td>\r\n\t\t\t<td>rtywrty</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>rwywr</td>\r\n\t\t\t<td>rtyrtyr</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>retyret</td>\r\n\t\t\t<td>rtyrtyrty</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>",
+        "short_description": null,
+        "price": "716.65",
+        "amount": 12,
+        "creation_date": "2022-12-31T18:46:54.131Z",
+        "update_date": "2023-01-01T19:55:49.020Z",
+        "image": "goods/1404159_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "5.7",
+        "sold": 10,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+        "name": "Digma EVE 15 P417",
+        "slug": "digma-eve-15-p417",
+        "description": "<p>Ноутбук Digma EVE 15 P417 &mdash; производительный компьютер с высокой эффективностью и востребованными функциями. Полная конфигурация для выполнения распространенных задач Матовый дисплей IPS-уровня с диагональю 15,6 дюйма и светодиодной подсветкой. Четырехъядерный процессор Intel Pentium J3710 1.6 ГГц. Частота от 1,6 до 2,64 ГГц. Интегрированная видеокарта Intel. Оперативная память объемом 8 Гб. Внутреннее хранилище 128 Гб со слотом для подключения SSD. Bluetooth, Wi-Fi, HDMI. 2 порта USB 3.0 и порт Type-C. Веб-камера, микрофон, стереодинамики. Аккумулятор 5000 mAh. Оптимальная скорость для загрузки программ и браузера Процессор Intel Pentium J3710 с возможностью увеличения тактовой частоты до 2,64 ГГц в режиме Турбо позволяет решать повседневные задачи. Работа в офисном редакторе, просмотр информации в интернете и загрузка данных станут быстрее благодаря оперативной памяти 8 Гб и вместительному внутреннему пространству 128 Гб. Возможность увеличить память Слот для SDD-накопителя расположен на нижней части корпуса. Установить дополнительное хранилище не составит труда. Оцените яркое изображение Красочную палитру передает IPS-матрица, разрешение Full HD 1920*1080 и встроенный графический контроллер от Intel. Широкий угол обзора экрана позволяет просматривать кинофильмы вместе с друзьями. Учитесь, работайте, общайтесь Для удобства подключения периферийных устройств ноутбук оборудован необходимыми разъемами на боковых панелях. Камера 2 Мп обеспечивает четкую картинку во время конференции. Беспроводное соединение поможет оставаться на связи дома или в кафе. Технические характеристики: Диагональ экрана в дюймах: 15.6 &quot; Разрешение экрана: 1920х1080 Светодиодная подсветка экрана: есть Поверхность экрана: матовая Тип матрицы: IPS Процессор: Intel Pentium J3710 Процессор, частота: 1.6 ГГц (2.64 ГГц, в режиме Turbo) Количество ядер процессора: 4-ядерный Оперативная память: 4 ГБ Тип графического процессора: интегрированный Количество слотов под модули памяти: отсутствуют Графический процессор: Intel HD Graphics 405 Объем eMMC: 128 ГБ Особенности жестких дисков: Разъем M2 для подключения SSD Тип ODD: отсутствует Кард-ридер: есть, поддержкаMicro SD Поддержка технологии Wi-Fi: Да, 802.11 b/g/n Поддержка технологии Bluetooth: Да, v4.0 Порты USB 3.0: 2 шт. Порты USB 3.0 (Type-C): 1 шт. Разъем mini HDMI: 1 шт. Операционная система: Windows 10 Home Разрядность ОС: 64-bit Поддержка языков: Single Language Веб-камера: встроенная Разрешение веб-камеры: 2 Мп Встроенный микрофон: есть Разъем для наушников: есть Акустическая система: стереодинамики Подсветка клавиш клавиатуры: нет Емкость батареи: 5000 mAh Размеры (ШхГхВ): 370 х 237 х 21 мм Вес: 1.54 кг Гарантия производителя: 12 мес</p>",
+        "short_description": null,
+        "price": "333.33",
+        "amount": 17,
+        "creation_date": "2022-12-31T19:08:35.005Z",
+        "update_date": "2023-01-09T17:28:07.375Z",
+        "image": "goods/1470838_v01_b.jpg",
+        "category": 2,
+        "is_limited": true,
+        "index": "8.5",
+        "sold": 79,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+        "name": "CHUWI Corebook X 14/8/256",
+        "slug": "chuwi-corebook-x-148256",
+        "description": "Ультрабук CHUWI CoreBook X 14\"(2160x1440 IPS)/Intel Core i3 10110U(2.1Ghz)/8192Mb/256SSDGb/noDVD/Int:Intel UHD Graphics/Cam/BT/WiFi/46WHr/war 1y/1.4kg/Grey/Win11Home + подсветка клавиатуры",
+        "short_description": null,
+        "price": "483.33",
+        "amount": 12,
+        "creation_date": "2022-12-31T19:36:08.553Z",
+        "update_date": "2023-01-01T16:52:44.162Z",
+        "image": "goods/1775349_v04_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "6.9",
+        "sold": 77,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+        "name": "MSI Modern 15 A11MU-1064XRU",
+        "slug": "msi-modern-15-a11mu-1064xru",
+        "description": "Серия Modern – это современные ноутбуки для динамичной жизни. Новейший процессор Intel® Core™ i7 и дискретная видеокарта NVIDIA® помогут с легкостью решать различные задачи и продвигаться вперед и в учебе, и в карьере.\r\nРазные цвета\r\nКорпус ноутбука, обладающий приятной на ощупь шлифованной текстурой, доступен в нескольких цветовых вариантах. Цвет Bluestone напоминает о голубом небе ранним утром, Beige Mousse – о залитых солнцем днях, а Carbon Gray – о таинственных вечерах. Следуя современным тенденциям, дизайн устройства отличается сдержанной элегантностью.\r\n*Не все цвета могут быть доступны на рынке. Рекомендуется уточнять у местного поставщика точные предложения и подробные спецификации.\r\nid design notebook in 3 colors\r\nНеограниченная скорость\r\nВ ноутбуках серии Modern используются новейшие 11-го поколения Intel® Core™ i7, поэтому несмотря на свою портативность и малый вес они обеспечивают высокую производительность. Встроенное графическое ядро Iris® Xe ускоряет профессиональные приложения, позволяя еще эффективнее решать любые рабочие задачи.\r\n* Сравнивается графическая производительность процессора i7-1185G7 с моделью i7-1065G7. Результаты могут меняться в зависимости от конфигурации.",
+        "short_description": null,
+        "price": "866.67",
+        "amount": 14,
+        "creation_date": "2022-12-31T19:37:10.318Z",
+        "update_date": "2023-01-01T17:02:50.080Z",
+        "image": "goods/1848472_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "5.4",
+        "sold": 21,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 7,
+    "fields": {
+        "name": "Apple MacBook Pro 14.2\"",
+        "slug": "apple-macbook-pro-142",
+        "description": "MacBook Air 2022(M2) года можно назвать одним из крупнейших обновлений линейки за всю историю. Он полностью изменился внешне, получил более новый и мощный процессор M2, улучшенную веб-камеру, квадро-фонические динамики объёмного звучания, разъём MagSafe 3 и более новую клавиатуру, при этом вес ноутбука составляет всего 1240 граммов, а корпус, как и прежде, сделан из приятного алюминия.\r\n\r\nПроизводительность\r\n\r\nПроцессор M2 получил более мощную графику, даже в сравнении с M1. Прирост графической производительности увеличился на треть, а в сравнении с интегрированной графикой MacBook на Intel он кажется фантастическим. В сочетании с высокоскоростной объединённой памятью и быстрыми SSD, MacBook Air обеспечивает впечатляющую мощность во всех сценариях. Прирост вычислительной мощности составляет 18%, но во многих задачах более новый М2 опережает M1 в полтора раза, а при кодировании видео в формате ProRes разница составляет внушительные 300%.\r\n\r\nВсё для комфортной работы\r\n\r\nУдобная клавиатура с подсветкой и большими функциональными клавишами позволяет комфортно работать где угодно, а большой трекпад с поддержкой Force Touch обеспечит максимум комфорта при работе с macOS. В след за MacBook Pro, представленными осенью 2021 года, MacBook Air получил более современную веб-камеру с разрешением Full HD, а разъём MagSafe позволит не переживать, что кто-нибудь наступит на провод, пока ноутбук заряжается.\r\n\r\nЗвук внушает уважение\r\n\r\nMacBook получил систему из четырёх динамиков объёмного звучания с поддержкой Spatial Audio и Dolby Atmos. Теперь рядом с клавиатурой нет сеток динамиков, которые постоянно забиваются пылью. Система из трёх микрофонов обеспечивает отличное качество передачи звука, а разъём 3,5 мм позволяет подключать проводные гарнитуры. Владельцы моделей AirPods с поддержкой Spatial Audio смогут оценить пространственный звук с отслеживанием положения головы.\r\n\r\nБезопасность\r\n\r\nВажной особенностью любого Mac с процессором от Apple является Secure Enclave – это сопроцессор с выделенным криптографическим модулем. Он обеспечивает аппаратное шифрование данных. В отличие от любого MacBook с процессором Intel, где такого модуля нет, либо используется отдельный чип Apple T2, обеспечивается более высокая скорость шифрования данных. В сочетании со службами iCloud, удобным сканером отпечатка Touch ID и службой шифрования диска FileVault, обеспечивается высокий уровень безопасности без неудобств и необходимости запоминать кучу длинных паролей.\r\n\r\nСовершенно новый дизайн\r\n\r\nКорпус MacBook Air лишился особенностей самой первой модели данной линейки – сужающегося корпуса. Толщина компьютера стала равномерной и составляет всего 1,13 см, а дизайн во многом напоминает 14-дюймовый MacBook Pro. Air получил дополнительные расцветки, а дисплей ноутбука обзавёлся \"чёлкой\" и соотношением сторон 3:2. Он поддерживает TrueTone и примечателен довольно высокой яркостью (500 нит), а качественная IPS-матрица поддерживает миллиард цветов и пространство DCI-P3.\r\n\r\nРасширяемость\r\n\r\nДва разъёма USB 4, совмещённые с Thunderbolt 3, позволяют подключать мониторы (поддерживаются дисплеи с разрешением до 6К), скоростные внешние хранилища и другие аксессуары и гаджеты. Максимальная скорость передачи данных составляет 40 Гбит/с для Thunderbolt и 10 Гбит/с для USB, а всевозможные хабы и адаптеры позволят превратить каждый такой разъём в целый набор полезных портов. Поскольку для зарядки MacBook Air можно использовать MagSafe, оба разъёма USB-C можно использовать, работая от сети.",
+        "short_description": null,
+        "price": "8566.67",
+        "amount": 2,
+        "creation_date": "2022-12-31T19:39:11.410Z",
+        "update_date": "2023-01-15T07:50:41.170Z",
+        "image": "goods/1623750_v01_b.jpg",
+        "category": 2,
+        "is_limited": true,
+        "index": "9.6",
+        "sold": 44,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 8,
+    "fields": {
+        "name": "MSI CreatorPro Z17 A12UMST-260RU, 17\"",
+        "slug": "msi-creatorpro-z17-a12umst-260ru-17",
+        "description": "Серия CreatorPro – это мощные мобильные рабочие станции с самыми передовыми технологиями, которые позволят вам творить без каких-либо ограничений. Программная сертификация со стороны разработчиков профессиональных приложений – гарантия стабильности при любых нагрузках.\r\nПрофессиональное решение\r\nМобильные рабочие станции CreatorPro идеально подходят для профессиональных приложений и многозадачного режима, будь то архитектурное проектирование, ИИ, виртуальная реальность, инженерное моделирование или трехмерный рендеринг.\r\nУскоряем творческий процесс\r\nНеважно, новичок вы в области компьютерной графики или же опытный ветеран, видеокарта NVIDIA поможет быстрее воплощать в жизнь любые визуальные проекты. Ускоренный рендеринг, красочный стриминг, улучшенный видеомонтаж – графические процессоры NVIDIA, применяемые в ноутбуках и ПК на базе платформы NVIDIA Studio, ускоряют рабочий процесс за счет высокой производительности и оптимизированных под креативные приложения драйверов.",
+        "short_description": null,
+        "price": "6266.67",
+        "amount": 4,
+        "creation_date": "2022-12-31T19:41:30.771Z",
+        "update_date": "2023-01-15T07:00:27.865Z",
+        "image": "goods/1835792_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "9.6",
+        "sold": 8,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 9,
+    "fields": {
+        "name": "HIPER Workbook N1567",
+        "slug": "hiper-workbook-n1567",
+        "description": "Ноутбук сертифицирован EAC и имеет русифицированную клавиатуру (RU/EN) и Руководство пользователя.\r\nГарантия 12 месяцев. Осуществляется в любом авторизованном сервисном центра производителя. Более подробную информацию о местонахождении можете найти на сайте производителя в разделе поддержка.   \r\nМы заботимся о своих клиентах. Поэтому каждый ноутбук, вдобавок к заводской упаковке, дополнительно фасуется в коробку, для сохранности при транспортировке.",
+        "short_description": null,
+        "price": "583.33",
+        "amount": 26,
+        "creation_date": "2022-12-31T19:43:03.138Z",
+        "update_date": "2023-01-01T16:57:11.066Z",
+        "image": "goods/1790041_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "6.0",
+        "sold": 95,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 10,
+    "fields": {
+        "name": "Apple MacBook Air A2337",
+        "slug": "apple-macbook-air-a2337",
+        "description": "<p>MacBook Air. С новой силой. С появлением чипа M1 самый тонкий и лёгкий ноутбук в линейке Apple полностью преобразился. Центральный процессор теперь работает до 3,5 раза быстрее. Графический &mdash; до 5 раз. А благодаря передовой системе Neural Engine скорость машинного обучения возросла до 9 раз. Новый MacBook Air работает без подзарядки дольше, чем предыдущие модели. И совсем не шумит, потому что у него нет вентилятора. Мощность ещё никогда не была такой компактной. Маленький чип. Грандиозный прорыв. Первый чип, разработанный специально для Mac. Поразительно, но система на чипе Apple M1 вмещает 16 миллиардов транзисторов и объединяет центральный и графический процессоры, систему Neural Engine, контроллеры ввода-вывода и множество других компонентов. Чип Apple M1 позволяет использовать на Mac уникальные технологии и обеспечивает невероятную производительность в сочетании с лучшей в отрасли энергоэффективностью. Это не просто ещё один шаг для Mac &mdash; это принципиально новый уровень возможностей. Целый день без подзарядки. До 18 часов работы. Эффективный теплообмен. Никаких вентиляторов. И тишина. Высокая скорость и быстрый отклик. Дисплей Retina. Нереально реалистичные цвета. На дисплее Retina с диагональю 13,3 дюйма и разрешением 2560&times;1600 пикселей изображения выглядят более детально и реалистично. Тексты стали ещё чётче, а цвета &mdash; ярче. Стекло дисплея доходит до самого края корпуса, поэтому ничто не отвлекает от великолепного изображения. Механизм &laquo;ножницы&raquo;. Клавиатура MacBook Air оснащена улучшенным механизмом &laquo;ножницы&raquo; &mdash; это самая удобная клавиатура на ноутбуках Mac.</p>",
+        "short_description": null,
+        "price": "1666.67",
+        "amount": 5,
+        "creation_date": "2022-12-31T19:44:16.221Z",
+        "update_date": "2023-01-15T07:26:28.004Z",
+        "image": "goods/1834965_v01_b.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "9.9",
+        "sold": 38,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 11,
+    "fields": {
+        "name": "GIGABYTE NVIDIA GeForce RTX 4090",
+        "slug": "gigabyte-nvidia-geforce-rtx-4090",
+        "description": "<p>Потоковые мультипроцессоры NVIDIA Ada Lovelace: повышение производительности и энергоэффективности до 2 раз Тензорные ядра 4-го поколения: увеличение производительности ИИ до 2 раз Ядра RT 3-го поколения: увеличение производительности трассировки лучей до 2 раз На базе GeForce RTX&reg; 4090 Интегрирован с 384-битным интерфейсом памяти GDDR6X 24 ГБ Система охлаждения WINDFORCE Двойной BIOS Защитная металлическая задняя пластина Система охлаждения WINDFORCE включает в себя три 100-мм вентилятора с уникальными лопастями, попеременное вращение, 8 композитных медных тепловых трубок, большую испарительную камеру. Уменьшите турбулентность соседних вентиляторов и увеличьте давление воздушного потока. GIGABYTE поворачивает соседние вентиляторы в противоположном направлении, чтобы направление воздушного потока между двумя вентиляторами было одинаковым, уменьшая турбулентность и увеличивая давление воздушного потока. 3D Active Fan обеспечивает полупассивное охлаждение, и вентиляторы остаются выключенными, когда графический процессор находится в режиме низкой нагрузки или в игре с низким энергопотреблением. Воздушный поток распределяется по треугольной кромке вентилятора и плавно направляется по трехмерной кривой на поверхности вентилятора. Конструкция с двойным шарикоподшипником имеет лучшую теплостойкость и эффективность, чем конструкция с втулкой. ОХЛАЖДЕНИЕ ЭКРАНА Удлиненная конструкция радиатора позволяет проходить воздушному потоку, обеспечивая лучшее рассеивание тепла. БОЛЬШАЯ ПАРОВАЯ КАМЕРА И ТЕПЛОВАЯ ТРУБА Большая испарительная камера напрямую контактирует с графическим процессором в сочетании с композитными тепловыми трубками, которые быстро передают тепло графического процессора и видеопамяти на радиатор. ДВОЙНОЙ БИОС Заводской настройкой по умолчанию является режим OC, обеспечивающий пользователям наилучшую производительность. Тем не менее, переключение в беззвучный режим будет более тихим. ЗАЩИТНАЯ МЕТАЛЛИЧЕСКАЯ ЗАДНЯЯ ПЛАСТИНА Металлическая задняя пластина не только придает эстетическую форму, но и улучшает структуру видеокарты, обеспечивая полную защиту. ПОКАЗАТЕЛИ МОЩНОСТИ При обнаружении каких-либо нарушений в подаче питания индикатор предупредит игроков миганием света.</p>",
+        "short_description": null,
+        "price": "2866.67",
+        "amount": 0,
+        "creation_date": "2023-01-01T07:45:44.692Z",
+        "update_date": "2023-01-08T14:37:33.840Z",
+        "image": "goods/1848944_v01_b.jpg",
+        "category": 6,
+        "is_limited": true,
+        "index": "8.2",
+        "sold": 14,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 12,
+    "fields": {
+        "name": "Palit NVIDIA GeForce RTX 4090",
+        "slug": "palit-nvidia-geforce-rtx-4090",
+        "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX™ 4090 GameRock основана на графическом процессоре с архитектурой нового поколения от NVIDIA для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях. GeForce RTX™ 4090 GameRock с кристаллическим дизайном Starlight Black имеет не только мерцающую ARGB подсветку, но и совершенно новые вентиляторы Gale Hunter и пластины радиатора Y Formula для оптимизации системы охлаждния",
+        "short_description": null,
+        "price": "2833.33",
+        "amount": 3,
+        "creation_date": "2023-01-01T07:47:17.845Z",
+        "update_date": "2023-01-01T17:07:14.873Z",
+        "image": "goods/1859908_v05_b.jpg",
+        "category": 6,
+        "is_limited": true,
+        "index": "5.2",
+        "sold": 49,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 13,
+    "fields": {
+        "name": "MSI NVIDIA GeForce RTX 4090",
+        "slug": "msi-nvidia-geforce-rtx-4090",
+        "description": "NVIDIA® GeForce RTX® 4090 – ультимативный графический процессор серии GeForce для геймеров и профессионалов, знаменующий собой гигантский прорыв с точки зрения производительности, эффективности, качества изображения и поддержки ИИ. Высокая частота кадров в играх, детализированные виртуальные миры с трассировкой лучей, аппаратное ускорение профессиональных приложений и новые возможности для творчества – все это доступно благодаря архитектуре NVIDIA Ada Lovelace и 24ГБ видеопамяти G6X",
+        "short_description": null,
+        "price": "2833.33",
+        "amount": 4,
+        "creation_date": "2023-01-01T07:48:21.580Z",
+        "update_date": "2023-01-01T17:04:29.373Z",
+        "image": "goods/1856152_v01_b.jpg",
+        "category": 6,
+        "is_limited": false,
+        "index": "8.2",
+        "sold": 6,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 14,
+    "fields": {
+        "name": "GIGABYTE NVIDIA GeForce RTX 4090, GV-N4090WF3-24GD, 24ГБ, GDDR6X, Ret",
+        "slug": "gigabyte-nvidia-geforce-rtx-4090-gv-n4090wf3-24gd-24gb-gddr6x-ret",
+        "description": "Потоковые мультипроцессоры NVIDIA Ada Lovelace: повышение производительности и энергоэффективности до 2 раз\r\nТензорные ядра 4-го поколения: увеличение производительности ИИ до 2 раз\r\nЯдра RT 3-го поколения: увеличение производительности трассировки лучей до 2 раз\r\nНа базе GeForce RTX® 4090\r\nИнтегрирован с 384-битным интерфейсом памяти GDDR6X 24 ГБ\r\nСистема охлаждения WINDFORCE\r\nДвойной BIOS\r\nЗащитная металлическая задняя пластина\r\nСистема охлаждения WINDFORCE включает в себя три 100-мм вентилятора с уникальными лопастями, попеременное вращение, 8 композитных медных тепловых трубок, большую испарительную камеру.\r\nУменьшите турбулентность соседних вентиляторов и увеличьте давление воздушного потока.\r\nGIGABYTE поворачивает соседние вентиляторы в противоположном направлении, чтобы направление воздушного потока между двумя вентиляторами было одинаковым, уменьшая турбулентность и увеличивая давление воздушного потока.\r\n3D Active Fan обеспечивает полупассивное охлаждение, и вентиляторы остаются выключенными, когда графический процессор находится в режиме низкой нагрузки или в игре с низким энергопотреблением.\r\nВоздушный поток распределяется по треугольной кромке вентилятора и плавно направляется по трехмерной кривой на поверхности вентилятора.\r\nКонструкция с двойным шарикоподшипником имеет лучшую теплостойкость и эффективность, чем конструкция с втулкой.\r\nОХЛАЖДЕНИЕ ЭКРАНА\r\nУдлиненная конструкция радиатора позволяет проходить воздушному потоку, обеспечивая лучшее рассеивание тепла.\r\nБОЛЬШАЯ ПАРОВАЯ КАМЕРА И ТЕПЛОВАЯ ТРУБА\r\nБольшая испарительная камера напрямую контактирует с графическим процессором в сочетании с композитными тепловыми трубками, которые быстро передают тепло графического процессора и видеопамяти на радиатор.\r\nДВОЙНОЙ БИОС\r\nЗаводской настройкой по умолчанию является режим OC, обеспечивающий пользователям наилучшую производительность. Тем не менее, переключение в беззвучный режим будет более тихим.\r\nЗАЩИТНАЯ МЕТАЛЛИЧЕСКАЯ ЗАДНЯЯ ПЛАСТИНА\r\nМеталлическая задняя пластина не только придает эстетическую форму, но и улучшает структуру видеокарты, обеспечивая полную защиту.\r\nПОКАЗАТЕЛИ МОЩНОСТИ\r\nПри обнаружении каких-либо нарушений в подаче питания индикатор предупредит игроков миганием света.",
+        "short_description": null,
+        "price": "2833.33",
+        "amount": 4,
+        "creation_date": "2023-01-01T07:50:26.364Z",
+        "update_date": "2023-01-17T16:31:33.760Z",
+        "image": "goods/1852987_v02_b.jpg",
+        "category": 6,
+        "is_limited": false,
+        "index": "8.9",
+        "sold": 91,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 15,
+    "fields": {
+        "name": "Palit NVIDIA GeForce RTX 4090, PA-RTX4090 GAMEROCK OC, 24ГБ, GDDR6X, OC, Ret [ned4090s19sb-1020g]",
+        "slug": "palit-nvidia-geforce-rtx-4090-pa-rtx4090-gamerock-oc-24gb-gddr6x-oc-ret-ned4090s19sb-1020g",
+        "description": "GeForce RTX™ 4090 GameRock с кристаллическим дизайном Starlight Black имеет не только мерцающую ARGB подсветку, но и совершенно новые вентиляторы Gale Hunter и пластины радиатора Y Formula для оптимизации системы охлаждния. ... GeForce RTX™ 40 Series. GeForce RTX™ 30 Series. GeForce RTX™ 20 Series. GeForce® GTX 16 Series. GeForce® GTX 10 Series.",
+        "short_description": null,
+        "price": "2816.67",
+        "amount": 2,
+        "creation_date": "2023-01-01T07:51:28.787Z",
+        "update_date": "2023-01-01T17:07:48.463Z",
+        "image": "goods/1859907_v01_b.jpg",
+        "category": 6,
+        "is_limited": true,
+        "index": "7.3",
+        "sold": 49,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 16,
+    "fields": {
+        "name": "Palit NVIDIA GeForce RTX 2060SUPER, PA-RTX2060SUPER DUAL 8G no LED, 8ГБ, GDDR6, Ret [ne6206s018p2-11",
+        "slug": "palit-nvidia-geforce-rtx-2060super-pa-rtx2060super-dual-8g-no-led-8gb-gddr6-ret-ne6206s018p2-11",
+        "description": "Видеокарта GeForce® RTX 2060 SUPER™ создана на базе архитектуры NVIDIA Turing™ и обеспечивает высочайший уровень производительности и графических возможностей для игр и работы с графикой. Зарядите свой ПК СУПЕР мощью! ... GeForce RTX™ 40 Series. GeForce RTX™ 30 Series. GeForce RTX™ 20 Series. GeForce® GTX 16 Series. GeForce® GTX 10 Series.",
+        "short_description": null,
+        "price": "533.33",
+        "amount": 12,
+        "creation_date": "2023-01-01T07:52:46.674Z",
+        "update_date": "2023-01-01T17:05:07.867Z",
+        "image": "",
+        "category": 6,
+        "is_limited": false,
+        "index": "4.7",
+        "sold": 46,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 17,
+    "fields": {
+        "name": "Palit NVIDIA GeForce RTX 3050, PA-RTX3050 DUAL, 8ГБ, GDDR6, Ret [ne63050019p1-190ad]",
+        "slug": "palit-nvidia-geforce-rtx-3050-pa-rtx3050-dual-8gb-gddr6-ret-ne63050019p1-190ad",
+        "description": "Серия Palit GeForce RTX™ 3050 Dual оснащена двумя большими 90 мм вентиляторами для эффективного охлаждения и имеет большую площадь отверстий на задней панели для оптимальной вентиляции. Настраиваемая RGB-подсветка на боковой стороне видеокарт позволит геймерам насладиться минималистскими световыми эффектами. ... GeForce RTX™ 40 Series. GeForce RTX™ 30 Series. GeForce RTX™ 20 Series. GeForce® GTX 16 Series. GeForce® GTX 10 Series.",
+        "short_description": null,
+        "price": "483.33",
+        "amount": 15,
+        "creation_date": "2023-01-01T07:54:11.922Z",
+        "update_date": "2023-01-01T17:05:38.608Z",
+        "image": "goods/1658278_v01_b.jpg",
+        "category": 6,
+        "is_limited": false,
+        "index": "3.8",
+        "sold": 16,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 18,
+    "fields": {
+        "name": "MSI NVIDIA GeForce RTX 3050, RTX 3050 GAMING X 8G, 8ГБ, GDDR6, Ret",
+        "slug": "msi-nvidia-geforce-rtx-3050-rtx-3050-gaming-x-8g-8gb-gddr6-ret",
+        "description": "<p>RTX 3050 gaming X. VGA_Gaming_another. Lighten up the show. NVIDIA 3050 main slidersFix. ... Самое свежее воплощение культовой серии Gaming от MSI &ndash; это все то же сочетание высокой скорости, эффективного охлаждения и безупречной эстетики, которое давно полюбилось увлеченным геймерам. ... Используя графический чип с микроархитектурой NVIDIA Ampere, видеокарта GeForce RTX&trade; 3050 обеспечит великолепную производительность в современных играх за счет скоростной памяти G6 и улучшенных вычислительных блоков (RT-ядер второго поколения, тензорных ядер третьего поколения, новых потоковых мультипроцессоров). ... 8ГБ GDDR6. DisplayPort x 3 HDMI x 1 (поддержка режима 4K / 120 Гц по стандарту HDMI 2.1).</p>",
+        "short_description": "",
+        "price": "516.67",
+        "amount": 15,
+        "creation_date": "2023-01-01T07:55:05.620Z",
+        "update_date": "2023-01-21T05:03:27.292Z",
+        "image": "",
+        "category": 6,
+        "is_limited": false,
+        "index": "6.5",
+        "sold": 43,
+        "is_active": false
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 19,
+    "fields": {
+        "name": "Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G, 8ГБ, GDDR6X, Ret [ned307t019p2-1046a]",
+        "slug": "palit-nvidia-geforce-rtx-3070ti-pa-rtx3070ti-gamingpro-8g-8gb-gddr6x-ret-ned307t019p2-1046a",
+        "description": "Видеокарта Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G - купить с доставкой и гарантией. Видеокарта Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G, 8ГБ, GDDR6X, Ret [ned307t019p2-1046a]: характеристики, фото, отзывы реальных покупателей. Условия продажи видеокарта Palit NVIDIA GeForce RTX 3070TI, PA-RTX3070TI GAMINGPRO 8G (1528277) в кредит или рассрочку. ... Видеочипсет: NVIDIA GeForce RTX 3070TI, 1575 МГц (1770 МГц, в режиме Boost); Память: 8 ГБ GDDR6X, 19000 МГц; Интерфейс: PCI-E 4.0; Техпроцесс: 8 нм; Разъемы: Display Port х 3, HDMI х 1, Питание: 8+8 pin, рекомендовано 700 Вт; Особенности: трассировка лучей; поддержка DLSS; Все характеристики.",
+        "short_description": null,
+        "price": "950.00",
+        "amount": 8,
+        "creation_date": "2023-01-01T07:56:19.730Z",
+        "update_date": "2023-01-01T17:06:33.741Z",
+        "image": "goods/1528277_v01_b.jpg",
+        "category": 6,
+        "is_limited": false,
+        "index": "2.1",
+        "sold": 5,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 20,
+    "fields": {
+        "name": "GIGABYTE NVIDIA GeForce RTX 3060Ti, GV-N306TGAMING OC-8GD 2.0 LHR, 8ГБ, GDDR6, OC, LHR, Ret",
+        "slug": "gigabyte-nvidia-geforce-rtx-3060ti-gv-n306tgaming-oc-8gd-20-lhr-8gb-gddr6-oc-lhr-ret",
+        "description": "Видеокарта с молниезащитой\r\n\r\nВсе товары в магазине абсолютно новые и оригинальные, не вскрывались.\r\n\r\nПеред покупкой видеокарты в нашем магазине, если вы не уверены, совместима ли модель видеокарты с вашим устройством, проконсультируйтесь с нами перед покупкой, и мы будем рады ответить вам.\r\n\r\nКак только видеокарта будет получена, мы не будем принимать возмещение или возмещение, если видеокарта несовместима с вашим собственным устройством.\r\n\r\nЕсли графическую карту нельзя использовать после ее установки на устройстве, отнесите графическую карту в местную профессиональную мастерскую по ремонту компьютеров или в профессиональное агентство по тестированию оборудования, чтобы проверить и подтвердить конкретную причину сбоя, а также представить отчет о профессиональной проверке.\r\n\r\n(Примечание: при тестировании видеокарты в профессиональном испытательном агентстве, пожалуйста, следуйте всему процессу. Не позволяйте профессиональному агентству разбирать видеокарту и повреждать официальную гарантийную наклейку. Если официальная гарантийная наклейка повреждена, бренд откажет вам. в течение гарантийного срока.)",
+        "short_description": null,
+        "price": "816.67",
+        "amount": 6,
+        "creation_date": "2023-01-01T08:03:02.673Z",
+        "update_date": "2023-01-01T16:54:14.403Z",
+        "image": "goods/1558222_v01_b.jpg",
+        "category": 6,
+        "is_limited": false,
+        "index": "5.5",
+        "sold": 24,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 21,
+    "fields": {
+        "name": "Huawei Nova Y70 4/128Gb, голубой перламутр",
+        "slug": "huawei-nova-y70-4128gb-goluboj-perlamutr",
+        "description": "Смартфон Huawei Nova Y70 с аккумулятором на 6000 мА*ч выполнен в пластиковом корпусе голубого цвета и оснащен 4 Гб ОЗУ и 128 Гб встроенной памяти, для расширения которой можно установить карту формата microSD объемом до 512 Гб.\r\nСмартфон работает на фирменной оболочке EMUI 12 под управлением восьмиядерного процессора Kirin 710. Изображение выводится на экран диагональю 6,75 дюйма, представленный TFT LCD-матрицей разрешением 1600х720 пикселей. Основная камера представлена тремя модулями: объектив высокого разрешения на 48 Мп, ультраширокий модуль на 5 Мп и объектив на 2 Мп с возможностью измерения глубины резкости. Фронтальная камера представлена модулем 8 Мп.\r\nСмартфон поддерживает быструю зарядку от блока Huawei SuperCharge мощностью 22,5 Вт. Для подключения к сотовой сети используется SIM-карта формата nano-SIM с поддержкой стандарта связи 4G LTE. Дополнительно есть модуль Wi-Fi и Bluetooth, порт 3,5 мм для подключения наушников или акустической системы и сканер отпечатков пальцев, расположенный на боковой кнопке включения. Размер смартфона — 168,3х77,7х8,98 мм при весе 199 г.",
+        "short_description": null,
+        "price": "216.67",
+        "amount": 35,
+        "creation_date": "2023-01-01T08:07:14.263Z",
+        "update_date": "2023-01-01T16:58:50.154Z",
+        "image": "goods/1769864_v01_b.jpg",
+        "category": 4,
+        "is_limited": false,
+        "index": "1.9",
+        "sold": 11,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 22,
+    "fields": {
+        "name": "REALME 8 6/128Gb, черный",
+        "slug": "realme-8-6128gb-chernyj",
+        "description": "realme 8 оснащен мощным игровым процессором Helio G95 с тактовой частотой 2,05 ГГц и графическим процессором ARM G76. Процессор обеспечивает стабильную игру с высоким качеством изображения. Технология быстрой зарядки. ... 2. Информация о скорости зарядки и сроке службы аккумулятора основана на лабораторных исследованиях realme. 3. Вес устройства в черном и серебряном цвете 177 гр, ультратонкий корпус 7.99 мм. Данная спецификация основана на лабораторных исследованиях realme. Результаты могут меняться в зависимости от погодных условий.",
+        "short_description": null,
+        "price": "333.33",
+        "amount": 21,
+        "creation_date": "2023-01-01T08:08:13.734Z",
+        "update_date": "2023-01-01T17:08:18.678Z",
+        "image": "goods/1517181_v01_b.jpg",
+        "category": 4,
+        "is_limited": false,
+        "index": "6.2",
+        "sold": 28,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 23,
+    "fields": {
+        "name": "Xiaomi Redmi 9A 32Gb, серый",
+        "slug": "xiaomi-redmi-9a-32gb-seryj",
+        "description": "Смартфон Xiaomi Redmi 9A в темно-сером пластиковом корпусе оснащен самыми технологичными решениями. Это делает его оптимальным выбором для пользователя, который следит за прогрессом в области электроники. IPS-экран модели обладает диагональю 6.53 дюйма и транслирует изображение с разрешением до 1600x720 пикселей.\r\nВ основе достойной производительности смартфона – процессор MediaTek Helio G25 на 8 ядер, графический ускоритель PowerVR GE8320 и 2 ГБ оперативной памяти. Эта конфигурация позволяет устройству эффективно работать сразу в нескольких приложениях. За счет внутренней памяти объемом 32 ГБ в смартфоне Xiaomi Redmi 9A можно хранить все необходимые владельцу приложения и файлы. Основная камера устройства делает снимки с разрешением до 13 Мп, а видео она позволяет записывать в качестве Full HD. Практичный «бонус» модели – возможность взаимодействия одновременно с 2 SIM-картами в сетях диапазонов 2/3/4G/LTE.",
+        "short_description": null,
+        "price": "100.00",
+        "amount": 33,
+        "creation_date": "2023-01-01T08:09:05.086Z",
+        "update_date": "2023-01-15T07:13:17.871Z",
+        "image": "goods/1402120_v01_b.jpg",
+        "category": 4,
+        "is_limited": false,
+        "index": "7.8",
+        "sold": 72,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 24,
+    "fields": {
+        "name": "Apple iPhone 13 128Gb, A2631, темная ночь",
+        "slug": "apple-iphone-13-128gb-a2631-temnaya-noch",
+        "description": 

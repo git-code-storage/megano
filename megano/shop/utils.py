@@ -21,17 +21,19 @@ def get_total_cart_items(request):
         total_cart_items = 0
         total_cost = 0
         order = None
+        products = None
         if 'cart' in request.session.keys():
             products_keys = request.session['cart'].keys()
-            products = Product.objects.filter(slug__in=products_keys)
-            for product in products:
-                amount = request.session['cart'][product.slug]
-                total_cart_items += request.session['cart'][product.slug]
-                total_cost += product.price * amount
-            normal_delivery = TypeOfDelivery.objects.get(type_of_delivery='NORMAL')
-            logger.info(f'normal_delivery - {normal_delivery.type_of_delivery}')
-            if total_cost < normal_delivery.min_order:
-                total_cost += normal_delivery.cost
-            return total_cart_items, total_cost, products
+            if products_keys:
+                products = Product.objects.filter(slug__in=products_keys)
+                for product in products:
+                    amount = request.session['cart'][product.slug]
+                    total_cart_items += request.session['cart'][product.slug]
+                    total_cost += product.price * amount
+                normal_delivery = TypeOfDelivery.objects.get(type_of_delivery='NORMAL')
+                logger.info(f'normal_delivery - {normal_delivery.type_of_delivery}')
+                if total_cost < normal_delivery.min_order:
+                    total_cost += normal_delivery.cost
+        return total_cart_items, total_cost, products
 
 

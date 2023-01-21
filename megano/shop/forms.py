@@ -1,4 +1,5 @@
 from django import forms
+from .models import Feedback
 
 
 class PriceForm(forms.Form):
@@ -18,6 +19,19 @@ class ChoicePaymentForm(forms.Form):
 class CardForm(forms.Form):
     card = forms.CharField()
 
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Feedback
+        fields = ['name', 'email', 'feedback']
+
+
+class AuthCommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Feedback
+        fields = ['feedback']
 
 
 

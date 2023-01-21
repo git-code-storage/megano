@@ -1,50 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load cache %}
 
 {% block content %}
   <div class="Middle">
+    {% cache 300 top_categories %}
     <div class="Section">
       <div class="wrap">
-        <div class="BannersHome"><a class="BannersHomeBlock" href="#">
+        <div class="BannersHome"><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.0.slug 'pop_asc' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
-                <strong class="BannersHomeBlock-title">Video Cards
+                <strong class="BannersHomeBlock-title">{{top_categories.0.name}}
                 </strong>
-                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$199.00</span>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">${{top_categories.0.min_price}}</span>
                 </div>
               </div>
               <div class="BannersHomeBlock-block">
-                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                <div class="BannersHomeBlock-img"><img src="{{ top_categories.0.image_url }}" alt="{{top_categories.0.name}}"/>
                 </div>
               </div>
-            </div></a><a class="BannersHomeBlock" href="#">
+            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.1.slug 'pop_asc' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
-                <strong class="BannersHomeBlock-title">Head Phones
+                <strong class="BannersHomeBlock-title">{{top_categories.1.name}}
                 </strong>
-                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$210.00</span>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">${{top_categories.1.min_price}}</span>
                 </div>
               </div>
               <div class="BannersHomeBlock-block">
-                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                <div class="BannersHomeBlock-img"><img src="{{ top_categories.1.image_url }}" alt="{{top_categories.1.name}}"/>
                 </div>
               </div>
-            </div></a><a class="BannersHomeBlock" href="#">
+            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.2.slug 'pop_asc' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
-                <strong class="BannersHomeBlock-title">Bass Speakers
+                <strong class="BannersHomeBlock-title">{{top_categories.2.name}}
                 </strong>
-                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">$159.00</span>
+                <div class="BannersHomeBlock-content">from&#32;<span class="BannersHomeBlock-price">${{top_categories.2.min_price}}</span>
                 </div>
               </div>
               <div class="BannersHomeBlock-block">
-                <div class="BannersHomeBlock-img"><img src="{% static 'img/content/home/videoca.png' %}" alt="videoca.png"/>
+                <div class="BannersHomeBlock-img"><img src="{{ top_categories.2.image_url }}" alt="{{top_categories.2.name}}"/>
                 </div>
               </div>
             </div></a>
         </div>
       </div>
     </div>
+    {% endcache %}
     <div class="Section Section_column Section_columnDesktop"  >
       <div class="wrap">
         <div class="Section-content">

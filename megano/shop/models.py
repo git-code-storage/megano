@@ -4,6 +4,7 @@ from django.urls import reverse
 from mptt.models import MPTTModel, TreeForeignKey
 from django.template.defaultfilters import slugify
 from ckeditor.fields import RichTextField
+from django.db.models import Q, Min
 
 
 class Category(MPTTModel):
@@ -36,6 +37,16 @@ class Category(MPTTModel):
         except:
             url = ''
         return url
+
+    @property
+    def min_price(self):
+        try:
+            q = Q(is_active=True) & Q(category=self)
+            product = Product.objects.filter(q).order_by('price').first()
+            min_price = product.price
+        except:
+            min_price = 0
+        return min_price
 
     class MPTTMeta:
         db_table = 'category'
@@ -110,6 +121,8 @@ class Feedback(models.Model):
     feedback = models.TextField()
     score = models.PositiveSmallIntegerField(default=0)
     creation_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    name = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
         db_table = 'feedback'
