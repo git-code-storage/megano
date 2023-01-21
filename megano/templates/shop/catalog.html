@@ -40,19 +40,19 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input class="form-input form-input_full" id="title" name="name" type="text" value="{{ title }}" placeholder="Название"/>
+                  <input class="form-input form-input_full" id="title" name="name" type="text" value="{{ title }}" placeholder="Name"/>
                 </div>
                 <div class="form-group">
                   <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
                 </div>
                 <div class="form-group">
                   <label class="toggle">
-                    <input type="checkbox" name="onhand" {{ onhand }}/><span class="toggle-box"></span><span class="toggle-text">Только товары в наличии</span>
+                    <input type="checkbox" name="onhand" {{ onhand }}/><span class="toggle-box"></span><span class="toggle-text">Only products in stock</span>
                   </label>
                 </div>
                 <div class="form-group">
                   <label class="toggle">
-                    <input type="checkbox" name="freedelivery" {{ freedelivery }}/><span class="toggle-box"></span><span class="toggle-text">С бесплатной доставкой</span>
+                    <input type="checkbox" name="freedelivery" {{ freedelivery }}/><span class="toggle-box"></span><span class="toggle-text">With free shipping</span>
                   </label>
                 </div>
                 <div class="form-group">
@@ -75,33 +75,33 @@
         </div>
         <div class="Section-content">
           <div class="Sort">
-            <div class="Sort-title">Сортировать по:
+            <div class="Sort-title">Sort by:
             </div>
 
 
             {% if sort == 'pop_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% elif sort == 'cost_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=cost_desc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=cost_desc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% elif sort == 'cost_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% elif sort == 'feed_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=feed_desc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=feed_desc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% elif sort == 'feed_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% elif sort == 'new_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=new_desc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=new_desc">Novelty</a>
             </div>
             {% elif sort == 'new_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% else %}
-            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=pop_desc">Популярности</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Цене</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Отзывам</a><a class="Sort-sortBy" href="?sort_by=new_asc">Новизне</a>
+            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=pop_desc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
             </div>
             {% endif %}
 

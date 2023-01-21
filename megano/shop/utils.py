@@ -1,4 +1,4 @@
-from .models import Order, Product, TypeOfDelivery
+from .models import Order, Product, Delivery, TypeOfDelivery
 import logging
 
 logger = logging.getLogger(__name__)
@@ -7,10 +7,11 @@ logger = logging.getLogger(__name__)
 def get_total_cart_items(request):
     if request.user.is_authenticated:
         customer = request.user
-        order, created = Order.objects.select_related('payment', 'delivery', 'delivery__type_of_delivery').get_or_create(customer=customer, complete=False)
+        order, created = Order.objects.select_related('payment').get_or_create(customer=customer, complete=False)
+        delivery = Delivery.objects.get_or_create(order=order, complete=False)
         total_cost, total_cart_items = order.get_cart_total_and_items
         order.save()
-        delivery = order.delivery
+
         if delivery and total_cost > 0:
             if total_cost < delivery.type_of_delivery.min_order:
                 total_cost += delivery.type_of_delivery.cost

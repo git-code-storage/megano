@@ -39,7 +39,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    phone = models.CharField(max_length=12, unique=True, default=None)
+    phone = models.CharField(max_length=12, unique=True, default=None, null=True, blank=True)
     name = models.CharField(max_length=50, null=True, blank=True)
     date_of_registration = models.DateTimeField(auto_now_add=True, null=True)
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True, default='avatars/no_avatar_image.jpg')

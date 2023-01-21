@@ -1,0 +1,44 @@
+[
+{
+    "model": "user.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ZFKV3ApI94UnHOMgaiBsdU$56PGPylbjxdcEODbrtbR9R4e/h7BCRmrl8Jiz/3+h7w=",
+        "last_login": "2023-01-21T11:57:33.404Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-01-21T08:45:48.261Z",
+        "email": "mishustin.vadim@yandex.ru",
+        "phone": "None",
+        "name": "None",
+        "date_of_registration": "2023-01-21T08:45:48.526Z",
+        "avatar": "avatars/40-20211209_171121.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.customuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$nlHjwDs4t0sO17Ni5D7Ifm$G92DYj0jUh/6JaNQnKzN4YYwXjxRvOS1K1UtDzX4mhk=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-21T14:05:57.513Z",
+        "email": "user@megano.test",
+        "phone": null,
+        "name": null,
+        "date_of_registration": "2023-01-21T14:05:57.777Z",
+        "avatar": "avatars/no_avatar_image.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

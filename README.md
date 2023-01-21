@@ -1,5 +1,9 @@
 Проект MEGANO
 
-#TODO:
-- функция для установки флага "is_limited" и подсчтета индекса "index";
-- кастомизация админки;
+Пользователь admin:
+- логин: mishsustin.vadim@yandex.ru
+- пароль: admin
+
+Обычный пользователь:
+- логин: user@megano.test
+- пароль: testuser01

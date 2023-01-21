@@ -59,7 +59,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     description = RichTextField(null=True, blank=True)
-    short_description = RichTextField(max_length=255, null=True, blank=True)
+    short_description = RichTextField(max_length=511, null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     amount = models.PositiveSmallIntegerField(default=0)
     creation_date = models.DateTimeField(auto_now_add=True)
@@ -208,8 +208,8 @@ class Order(models.Model):
 class Delivery(models.Model):
     address = models.ForeignKey(DeliveryAddress, on_delete=models.RESTRICT, blank=True, null=True)
     order = models.OneToOneField(Order, on_delete=models.RESTRICT, blank=True, null=True, unique=True)
-    comment = models.TextField()
-    complete = models.BooleanField(default=False)
+    comment = models.TextField(blank=True, null=True,)
+    complete = models.BooleanField(default=False, blank=True, null=True,)
     type_of_delivery = models.ForeignKey('TypeOfDelivery', on_delete=models.RESTRICT, blank=True, null=True)
 
     def __str__(self):

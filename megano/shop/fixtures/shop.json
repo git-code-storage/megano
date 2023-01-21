@@ -1,0 +1,469 @@
+[
+{
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+        "is_active": true,
+        "name": "laptops and computers",
+        "slug": "laptops-and-computers",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": null,
+        "lft": 1,
+        "rght": 6,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+        "is_active": true,
+        "name": "laptops",
+        "slug": "laptops",
+        "icon": "icon_category/laptop.png",
+        "image": "",
+        "is_favourites": true,
+        "parent": 1,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+        "is_active": true,
+        "name": "videocards",
+        "slug": "videocards",
+        "icon": "icon_category/videocards.png",
+        "image": "",
+        "is_favourites": true,
+        "parent": 1,
+        "lft": 4,
+        "rght": 5,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+        "is_active": true,
+        "name": "smartphones and gadgets",
+        "slug": "smartphones-and-gadgets",
+        "icon": "",
+        "image": "",
+        "is_favourites": false,
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "shop.category",
+    "pk": 5,
+    "fields": {
+        "is_active": true,
+        "name": "smartphones",
+        "slug": "smartphones",
+        "icon": "icon_category/smartphones.jpg",
+        "image": "",
+        "is_favourites": true,
+        "parent": 4,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 2,
+        "level": 1
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+        "name": "HUAWEI Mate 50 Pro 8/256Gb (DCO-LX9) Black",
+        "slug": "huawei-mate-50-pro-8256gb-dco-lx9-black",
+        "description": "<p>The Huawei Mate 50 Pro smartphone in a Black case is equipped with 8 GB of RAM and a built-in 256 GB storage. The latter can be doubled using the NM Card. The device works smoothly and confidently copes with multitasking mode thanks to the eight-core Qualcomm Snapdragon 8+ Gen 1 processor.<br />\r\nThe screen with a diagonal of 6.74 inches is made using OLED technology. The image is clear and bright in any light. The display consumes less energy than analogues made on matrices of previous generations. A special dimming function prevents eye fatigue when using the device at dusk. Certified impact-resistant glass reliably protects the screen from damage.<br />\r\nThe triple main camera (50 MP, 13 MP, 64 MP) allows you to record video in 4K quality. It is equipped with a wide aperture with the possibility of manual adjustment. There are modes for shooting at night, creating professional portraits and high-quality macro frames. The front module has a resolution of 13 MP.<br />\r\nThe smartphone receives power from a battery with a capacity of 4700 mAh. It supports multi-channel and wireless SuperCharge charging functions. If the resource is reduced to 1%, you can receive messages and incoming calls for 3 hours and have a conversation for 12 minutes.<br />\r\nThe case of this model is made of aluminum and plastic, has a moisture protection class IP68. The internal elements will not be affected by water ingress during rain or immersion to a shallow depth.</p>",
+        "short_description": "<p>The Huawei Mate 50 Pro smartphone in a Black case is equipped with 8 GB of RAM and a built-in 256 GB storage. The device works smoothly and confidently copes with multitasking mode thanks to the eight-core Qualcomm Snapdragon 8+ Gen 1 processor.<br />\r\n&nbsp;</p>",
+        "price": "760.00",
+        "amount": 8,
+        "creation_date": "2023-01-21T12:27:09.015Z",
+        "update_date": "2023-01-21T12:37:27.588Z",
+        "image": "goods/30065447bb.jpg",
+        "category": 5,
+        "is_limited": true,
+        "index": "7.8",
+        "sold": 14,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+        "name": "Apple iPhone 11 128GB White",
+        "slug": "apple-iphone-11-128gb-white",
+        "description": "<p>Take it higher. iPhone 11.</p>\r\n\r\n<p>A two-camera system with an ultra-wide-angle camera. Night mode and amazing video quality. Protection from water and dust. Long-term operation without recharging. Six beautiful flowers. 11 will become your favorite number.</p>\r\n\r\n<p>Specifications<br />\r\n&bull; 6.1 inch Liquid Retina HD LCD display<br />\r\n&bull; Protection against water and dust (when submerged to a depth of 2 meters for up to 30 minutes (IP68))<br />\r\n&bull; Dual 12 MP camera system (ultra-wide angle and wide angle) with Night mode, Portrait mode and 4K video support at up to 60 frames per second<br />\r\n&bull; TrueDepth 12 MP front camera with Portrait mode, 4K video and slow motion video support<br />\r\n&bull; Face ID for secure authentication<br />\r\n&bull; A13 Bionic chip with 3rd generation Neural Engine system<br />\r\n&bull; Fast charging capability</p>",
+        "short_description": "<p>Take it higher. iPhone 11.</p>\r\n\r\n<p>A two-camera system with an ultra-wide-angle camera. Night mode and amazing video quality. Protection from water and dust. Long-term operation without recharging. Six beautiful flowers. 11 will become your favorite number.</p>\r\n\r\n<p>&nbsp;</p>",
+        "price": "650.00",
+        "amount": 4,
+        "creation_date": "2023-01-21T12:47:05.420Z",
+        "update_date": "2023-01-21T12:47:05.420Z",
+        "image": "goods/30063237bb.jpg",
+        "category": 5,
+        "is_limited": true,
+        "index": "8.3",
+        "sold": 3,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+        "name": "Infinix Hot 20i 4/64Gb Black (X665E)",
+        "slug": "infinix-hot-20i-464gb-black-x665e",
+        "description": "<p>The Infinix Hot 20i Black smartphone is a model with an eight&mdash;core Mediatek Helio G25 processor with a clock frequency of 2 GHz. The amount of RAM is 4 GB, built&mdash;in - 64 GB. The model supports microSD memory cards up to 512 GB. Android 12 is used as the operating system. The 6.6-inch display with IPS technology has a resolution of 1612x720 pixels. Frameless design provides comfortable viewing of any content. Tempered glass protects the matrix from external influences.<br />\r\nThe 13/2/2 MP main camera allows you to create bright and rich images with high detail. The LED flash makes it possible to use the camera in low light conditions. The video is recorded in 1080p format. The 8 MP front camera is great for selfies and video communication in various messengers. The smartphone is equipped with screen orientation and acceleration sensors (G-sensor). There are microUSB interfaces and a 3.5mm headphone jack.<br />\r\nThe device supports the installation and simultaneous operation of two nanoSIM cards. The built-in Bluetooth 5.0 module is used for pairing with third-party devices without connecting wires. There is a Wi-Fi module and an FM tuner. A fingerprint scanner on the side face and a face recognition sensor are responsible for security &mdash; they also allow the smartphone owner to quickly log in to the system. Battery type &mdash; Li-Polymer, capacity &mdash; 5000 mAh. Talk time on a single charge is up to 56 hours. The dimensions of the model are 164.8x76.4x8.75 mm, weight &mdash; 195 g.</p>",
+        "short_description": "<p>The Infinix Hot 20i Black smartphone is a model with an eight&mdash;core Mediatek Helio G25 processor with a clock frequency of 2 GHz. The amount of RAM is 4 GB, built&mdash;in - 64 GB. The model supports microSD memory cards up to 512 GB. Android 12 is used as the operating system. The 6.6-inch display with IPS technology has a resolution of 1612x720 pixels. Frameless design provides comfortable viewing of any content. Tempered glass protects the matrix from external influences.</p>",
+        "price": "130.00",
+        "amount": 34,
+        "creation_date": "2023-01-21T12:51:37.418Z",
+        "update_date": "2023-01-21T12:51:37.418Z",
+        "image": "goods/400040135b.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "6.5",
+        "sold": 45,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+        "name": "Samsung Galaxy S22",
+        "slug": "samsung-galaxy-s22",
+        "description": "<p>Samsung Galaxy S22 is a flagship smartphone with the Android 12 operating system, based on an eight&mdash;core Exynos 2200 processor. The amount of RAM is 8 GB, permanent &mdash; 128 GB.</p>\r\n\r\n<p>On the back panel is the main camera with modules 12, 50 and 10 MP. It is capable of shooting videos in 8K format. The front camera is equipped with a 10-megapixel matrix. The frameless screen is made using Dynamic AMOLED 2X technology. Its diagonal is 6.1 inches, the resolution is 2400 x 1080 pixels, the refresh rate is 120 Hz.</p>\r\n\r\n<p>The mobile device is equipped with slots for two nano SIM cards and supports eSIM. Wi-Fi, Miracast, NFC and Bluetooth are available. GPS and GLONASS are responsible for navigation. There is a fingerprint scanner.</p>\r\n\r\n<p>The housing with protection from dust and water according to the IP68 standard is made of plastic. The port for connecting the charger and headset is USB type C. The capacity of the built&mdash;in battery is 3700 mAh.</p>",
+        "short_description": "<p>Samsung Galaxy S22 is a flagship smartphone with the Android 12 operating system, based on an eight&mdash;core Exynos 2200 processor. The amount of RAM is 8 GB, permanent &mdash; 128 GB.</p>",
+        "price": "900.00",
+        "amount": 23,
+        "creation_date": "2023-01-21T12:55:20.962Z",
+        "update_date": "2023-01-21T13:24:19.391Z",
+        "image": "goods/30063482bb.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "7.7",
+        "sold": 3,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+        "name": "Xiaomi Redmi Note 11S 6GB/128B Graphite Gray",
+        "slug": "xiaomi-redmi-note-11s-6gb128b-graphite-gray",
+        "description": "<p>The Redmi Note 11S smartphone is equipped with an eight-core MediaTek Helios 96 processor and 6 GB of RAM. The 5000 mAh battery supports fast charging technology.</p>\r\n\r\n<p>The 6.43-inch screen is created using AMOLED technology. Its resolution is 1080 x 2400 pixels, and the refresh rate is 90 Hz. The fingerprint scanner is located on the side. In combination with the NFC module, it allows you to use contactless payment systems and make secure financial transactions.</p>\r\n\r\n<p>The main quad camera module, located on the back panel, has a 108-megapixel matrix. The other lenses are 8, 2 and 2 MP, they are designed to create panoramas, portraits with beautifully blurred backgrounds and macro photographs. A 16-megapixel front camera is responsible for selfies and video communication.</p>",
+        "short_description": "<p>The Redmi Note 11S smartphone is equipped with an eight-core MediaTek Helios 96 processor and 6 GB of RAM. The 5000 mAh battery supports fast charging technology.</p>",
+        "price": "305.00",
+        "amount": 23,
+        "creation_date": "2023-01-21T13:05:59.909Z",
+        "update_date": "2023-01-21T13:05:59.909Z",
+        "image": "goods/30062385bb.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "7.2",
+        "sold": 12,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+        "name": "Xiaomi 12T 256Gb Black",
+        "slug": "xiaomi-12t-256gb-black",
+        "description": "<p>The Xiaomi 12T Black smartphone is a device with a 6.67&mdash;inch AMOLED display, which provides wide viewing angles and high contrast. The resolution is 1220x2712 pixels. The work is based on an eight-core Mediatek Dimension 8100-Ultra processor with a clock frequency of 4x2.8 GHz + 4x2 GHz. In combination with 8 GB of RAM, high performance is provided. The built-in 256 GB memory is provided for storing personal information. Slots for two nano-SIM make it possible to use the services of different operators.<br />\r\nThe device is equipped with a main camera module with a resolution of 108/8/2 MP, equipped with a flash for shooting in low light conditions. The ultra-wide-angle lens allows you to take large-scale pictures. The macro lens is used to fix small details. To create self-portraits, a 20 MP front camera is provided. The cooling system of the smartphone is equipped with a large evaporation chamber with an area of 3725 sq. mm. The device can work in a 5G network. From the built-in equipment there are Wi-Fi, Bluetooth and NFC modules.<br />\r\nThanks to GPS and GLONASS support, you can determine your current location at any time and use your smartphone as a navigator. A fingerprint scanner (located under the screen) and a face recognition sensor are responsible for security. Due to this, access to personal files to third parties will be limited, and the authorization procedure will be simplified for the owner. From the interfaces there is USB Type-C. The 5000 mAh battery supports fast charging. You can replenish the energy consumption of the battery in just 19 minutes. The dimensions of the model are 163.1x8.6x75.9 mm, weight &mdash; 202 g.</p>",
+        "short_description": "<p>The Xiaomi 12T Black smartphone is a device with a 6.67&mdash;inch AMOLED display, which provides wide viewing angles and high contrast. The resolution is 1220x2712 pixels. The work is based on an eight-core Mediatek Dimension 8100-Ultra processor with a clock frequency of 4x2.8 GHz + 4x2 GHz. In combination with 8 GB of RAM, high performance is provided.&nbsp;<br />\r\n&nbsp;</p>",
+        "price": "750.00",
+        "amount": 14,
+        "creation_date": "2023-01-21T13:08:31.350Z",
+        "update_date": "2023-01-21T13:08:46.680Z",
+        "image": "goods/30065233bb.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "8.7",
+        "sold": 24,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 7,
+    "fields": {
+        "name": "Samsung Galaxy A03 3/32GB Black (SM-A035)",
+        "slug": "samsung-galaxy-a03-332gb-black-sm-a035",
+        "description": "<p>Samsung Galaxy A03 is a smartphone with Android 11 operating system. The diagonal of the frameless screen is 6.5 inches, the resolution is 1600 x 720 pixels. The device supports face recognition technology.</p>\r\n\r\n<p>The Unisoc UMS9230 octa-core processor is responsible for performance. The amount of RAM is 3 GB, permanent &mdash; 32 GB. The main camera, supplemented with a flash, is dual, 48 + 2 MP. There is a front camera with a 5 MP matrix.</p>\r\n\r\n<p>The mobile device supports 2G, 3G and 4G/LTE networks. GPS and GLONASS modules are provided for navigation. Wi-Fi and Wi-Fi Direct are available. The capacity of the built&mdash;in battery is 5000 mAh. The plastic case has a 3.5mm audio jack for the headset and a USB type C port.</p>",
+        "short_description": "<p>Samsung Galaxy A03 is a smartphone with Android 11 operating system. The diagonal of the frameless screen is 6.5 inches, the resolution is 1600 x 720 pixels. The device supports face recognition technology.</p>",
+        "price": "125.00",
+        "amount": 35,
+        "creation_date": "2023-01-21T13:11:23.210Z",
+        "update_date": "2023-01-21T13:11:23.210Z",
+        "image": "goods/30063612b.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "7.1",
+        "sold": 23,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 8,
+    "fields": {
+        "name": "Apple iPhone 12 128GB Black",
+        "slug": "apple-iphone-12-128gb-black",
+        "description": "<p>The Apple iPhone 12 128GB Black smartphone has an IP68 enclosure. Thanks to this, the model is resistant to dust and liquid. The Apple A14 Bionic processor provides high performance during the launch of applications and games, as well as solving everyday tasks. The built-in 128 GB memory allows the user to store a large number of personal photos, videos and documents.<br />\r\nThe Apple iPhone 12 128GB Black smartphone is equipped with a frameless OLED Super Retina XDR screen with a diagonal of 6.1 inches. Due to this, it is convenient to watch movies, pass game levels and work in graphic editors. The model has two main and one front camera. This allows the user to create original content for social networks and home viewing. Built-in flash, autofocus, digital stabilization and optical zoom ensure high quality footage.<br />\r\nThe Apple iPhone 12 128GB Black smartphone supports wireless charging, which is convenient for restoring battery power. The face recognition sensor ensures the information security of the user. The NFC module allows the model to exchange data with other devices at high speed. Due to this, it takes a few seconds for the user to pay for services and purchases using a smartphone. A cable is supplied to transfer data to a laptop or computer.</p>",
+        "short_description": "<p>The Apple iPhone 12 128GB Black smartphone has an IP68 enclosure. Thanks to this, the model is resistant to dust and liquid. The Apple A14 Bionic processor provides high performance during the launch of applications and games, as well as solving everyday tasks. The built-in 128 GB memory allows the user to store a large number of personal photos, videos and documents.</p>",
+        "price": "870.00",
+        "amount": 24,
+        "creation_date": "2023-01-21T13:14:18.719Z",
+        "update_date": "2023-01-21T13:14:18.719Z",
+        "image": "goods/30066440b.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "7.6",
+        "sold": 6,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 9,
+    "fields": {
+        "name": "Apple iPhone 14 Pro Max 128GB Deep Purple",
+        "slug": "apple-iphone-14-pro-max-128gb-deep-purple",
+        "description": "<p>iPhone 14 Pro Max is a smartphone in a Deep Purple case made of stainless steel and Ceramic Shield shockproof glass, has a built&mdash;in memory of 128 GB. Thanks to the IP68 water and dust protection class, the device will not be damaged when diving to a depth of up to 6 m. The screen of the Super Retina XDR Pro Motion type with a diagonal of 6.7 inches is made using OLED technology.<br />\r\nThis model is equipped with three main and one front-facing camera. The main lens is protected from damage by a sapphire crystal. The modules allow you to record video in 4K quality, take photos with a 15-fold approximation and double removal. The power is provided by a lithium-ion battery, it can be powered via a computer, a network adapter or using a MagSafe dock with Qi function. The battery life is enough for 29 hours of watching video content and 95 hours of listening to music.<br />\r\nThe A16 Bionic six-core processor is responsible for performance. The device is equipped with a slot for a nano-format SIM card. It supports all existing mobile standards (including 5G). The device has NFC, Bluetooth 5.3 and Wi-Fi wireless data transmission modules. The dimensions of the smartphone are 160,7x77,6x7,85 cm, weight &mdash; 240 g.</p>",
+        "short_description": "<p>iPhone 14 Pro Max is a smartphone in a Deep Purple case made of stainless steel and Ceramic Shield shockproof glass, has a built&mdash;in memory of 128 GB. Thanks to the IP68 water and dust protection class, the device will not be damaged when diving to a depth of up to 6 m. The screen of the Super Retina XDR Pro Motion type with a diagonal of 6.7 inches is made using OLED technology.</p>",
+        "price": "2000.00",
+        "amount": 7,
+        "creation_date": "2023-01-21T13:20:24.769Z",
+        "update_date": "2023-01-21T13:20:24.769Z",
+        "image": "goods/30064939bb.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "8.9",
+        "sold": 2,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 10,
+    "fields": {
+        "name": "vivo Y35 4/128Gb Agate Black",
+        "slug": "vivo-y35-4128gb-agate-black",
+        "description": "<p>The Vivo Y35 smartphone in a black case is equipped with 4 GB of RAM and 128 GB of internal memory. The battery capacity is 5000 mAh. The smartphone has an eight-core Qualcomm Snapdragon 680 processor. The device runs on the Android 12 operating system.<br />\r\nThe screen is frameless, its diagonal is 6.58 inches. The model is equipped with three main cameras. There is a flash, digital zoom and stabilization. You can use a microSD memory card. The smartphone is equipped with an NFC contactless payment module. There is a screen orientation and acceleration sensor, a digital compass, a built-in FM tuner.</p>",
+        "short_description": "<p>The Vivo Y35 smartphone in a black case is equipped with 4 GB of RAM and 128 GB of internal memory. The battery capacity is 5000 mAh. The smartphone has an eight-core Qualcomm Snapdragon 680 processor. The device runs on the Android 12 operating system.</p>",
+        "price": "260.00",
+        "amount": 43,
+        "creation_date": "2023-01-21T13:27:09.032Z",
+        "update_date": "2023-01-21T13:27:09.032Z",
+        "image": "goods/30064437bb.jpg",
+        "category": 5,
+        "is_limited": false,
+        "index": "7.3",
+        "sold": 12,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 11,
+    "fields": {
+        "name": "MSI GeForce RTX 3070 VENTUS 3X OC",
+        "slug": "msi-geforce-rtx-3070-ventus-3x-oc",
+        "description": "<p>The MSI GeForce RTX 3070 Ventus 3X OC graphics card is equipped with a durable graphene backplate that performs the function of a passive cooling radiator. It uses an Nvidia graphics processor with Ampere microarchitecture, operating at a frequency of 1500 MHz. The amount of GDDR6&mdash;type memory is 8 GB.<br />\r\nThe model is connected to the motherboard via a PCI Express connector, there is an 8+8 pin connector for receiving power. It is recommended to install it in a system that has a power supply with a power of at least 650 watts. The HDMI output and three DisplayPort ports are responsible for the image output to the monitors.<br />\r\nFor heat removal there are three Torx Fan 3.0 fans with blades of traditional and dispersion types. Real-time monitoring and parameter adjustment is provided by the Dragon Center application.</p>",
+        "short_description": "<p>The MSI GeForce RTX 3070 Ventus 3X OC graphics card is equipped with a durable graphene backplate that performs the function of a passive cooling radiator. It uses an Nvidia graphics processor with Ampere microarchitecture, operating at a frequency of 1500 MHz. The amount of GDDR6&mdash;type memory is 8 GB.<br />\r\n&nbsp;</p>",
+        "price": "900.00",
+        "amount": 12,
+        "creation_date": "2023-01-21T13:32:26.473Z",
+        "update_date": "2023-01-21T13:32:40.837Z",
+        "image": "goods/30064150b.jpg",
+        "category": 3,
+        "is_limited": false,
+        "index": "8.8",
+        "sold": 3,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 12,
+    "fields": {
+        "name": "GIGABYTE GeForce RTX 4080 EAGLE OC 16GB",
+        "slug": "gigabyte-geforce-rtx-4080-eagle-oc-16gb",
+        "description": "<p>Gigabyte GeForce RTX 4080 Eagle OC video card with 16 GB of video memory and PCI Express interface is equipped with three active coolers for cooling. The device operates on the basis of GDDR 6 X video memory with a frequency of 22400 Mhz and a bit depth of 256 bits, supporting image output in 8K resolution.<br />\r\nThe frequency of the GPU is 2505 MHz. You can connect up to four monitors simultaneously using three DisplayPort ports and one HDMI connector. The minimum power of the power supply for the video card is 850 watts.</p>",
+        "short_description": "<p>Gigabyte GeForce RTX 4080 Eagle OC video card with 16 GB of video memory and PCI Express interface is equipped with three active coolers for cooling. The device operates on the basis of GDDR 6 X video memory with a frequency of 22400 Mhz and a bit depth of 256 bits, supporting image output in 8K resolution.</p>",
+        "price": "1800.00",
+        "amount": 9,
+        "creation_date": "2023-01-21T13:34:56.481Z",
+        "update_date": "2023-01-21T13:34:56.481Z",
+        "image": "goods/400049860b.jpg",
+        "category": 3,
+        "is_limited": true,
+        "index": "9.0",
+        "sold": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 13,
+    "fields": {
+        "name": "Zotac GeForce GTX 1650 OC 4GB GDDR6 128-bit Gaming",
+        "slug": "zotac-geforce-gtx-1650-oc-4gb-gddr6-128-bit-gaming",
+        "description": "<p>The Zotac GeForce GTX 1650 OC 128-bit Gaming video card with GDDR6 video memory, the volume of which is 4 GB, is a model developed on the basis of Nvidia&#39;s Turing microarchitecture. The process technology is equal to 12 nm. The memory bandwidth reaches 192 GB/sec. The bit depth of the memory bus is 128 bits. Turbo frequency &mdash; up to 1620 MHz. Turing shaders provide high performance in games of recent years. The minimum delay of the system combined with the maximum FPS will give an advantage in competitive games &mdash; you can be one step ahead of your opponents.<br />\r\nThe device is suitable for recording video and live broadcasts of gameplay. Up to three monitors can be connected to the video card at the same time. Resolution up to Ultra HD 8K (7680x4320 pixels) is supported. The connection interface is PCI&mdash;E 3.0, the connector form factor is PCI-E x16. The active air cooling system includes one axial fan. The number of expansion slots occupied by the video card is two. The optimal power of the power supply for working with this model is 350 watts. The dimensions are 11.2x15.1 cm.</p>",
+        "short_description": "<p>The Zotac GeForce GTX 1650 OC 128-bit Gaming video card with GDDR6 video memory, the volume of which is 4 GB, is a model developed on the basis of Nvidia&#39;s Turing microarchitecture. The process technology is equal to 12 nm. The memory bandwidth reaches 192 GB/sec. The bit depth of the memory bus is 128 bits. Turbo frequency &mdash; up to 1620 MHz.</p>",
+        "price": "250.00",
+        "amount": 42,
+        "creation_date": "2023-01-21T13:38:08.689Z",
+        "update_date": "2023-01-21T13:42:22.029Z",
+        "image": "goods/30065820bb.jpg",
+        "category": 3,
+        "is_limited": false,
+        "index": "6.9",
+        "sold": 19,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 14,
+    "fields": {
+        "name": "XFX Radeon RX 6600 XT SPEEDSTER Swift 210 8GB GDDR6",
+        "slug": "xfx-radeon-rx-6600-xt-speedster-swift-210-8gb-gddr6",
+        "description": "<p>The XFX Radeon RX 6600 XT Speedster Swift 210 video card is a model with GDDR6 video memory, the volume of which reaches 8 GB. It is suitable for running resource-demanding games and for working with graphics software and video processing in high resolution. The frequency of the GPU reaches 2589 MHz, the number of universal processors is 2048. The device is developed based on the AMD RDNA 2 architecture and is equipped with improved computing units, which ensures a high frame rate and smooth picture.<br />\r\nThe maximum memory bandwidth reaches 224 GB/sec. Ray tracing support is provided to create realistic lighting. Three DisplayPort and HDMI connectors are used for image output. It is possible to connect up to four monitors simultaneously. The maximum supported resolution is Ultra HD 8K (7680x4320 pixels). PCI-E 4.0 is used as the connection interface. Active air cooling avoids overheating of the graphics card at high loads. If the temperature drops below a certain mark, the level of operation of the fans is significantly reduced, which reduces the overall noise. The optimal power of the power supply for this model is 650 watts. The dimensions of the device are 13.1x24.1 cm.</p>",
+        "short_description": "<p>The XFX Radeon RX 6600 XT Speedster Swift 210 video card is a model with GDDR6 video memory, the volume of which reaches 8 GB. It is suitable for running resource-demanding games and for working with graphics software and video processing in high resolution. The frequency of the GPU reaches 2589 MHz, the number of universal processors is 2048.&nbsp;</p>",
+        "price": "600.00",
+        "amount": 17,
+        "creation_date": "2023-01-21T13:41:56.968Z",
+        "update_date": "2023-01-21T13:43:30.836Z",
+        "image": "goods/30065819bb.jpg",
+        "category": 3,
+        "is_limited": false,
+        "index": "7.9",
+        "sold": 4,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 15,
+    "fields": {
+        "name": "Dell G15 G15RE-A951GRY-PUS",
+        "slug": "dell-g15-g15re-a951gry-pus",
+        "description": "<p>Guarantee 1 year<br />\r\nThe warranty is provided by the seller ZD for Report BI/BO<br />\r\n15.6&quot;/1920x1080 pixels/IPS/AMD/Ryzan 5/GeForce RTX 3050 4GB/8GB/512 GB/Windows 11 Home 64<br />\r\nCountry China<br />\r\nSeries G15<br />\r\nOperating system Windows 11 Home 64<br />\r\nWindows OS is installed<br />\r\nProcessor AMD Ryzan 5 5600H 3.3 GHz<br />\r\nNumber of cores 6<br />\r\nProcessor model 5600R</p>",
+        "short_description": "",
+        "price": "1100.00",
+        "amount": 10,
+        "creation_date": "2023-01-21T13:50:41.919Z",
+        "update_date": "2023-01-21T13:50:41.919Z",
+        "image": "goods/30066488bb.jpg",
+        "category": 2,
+        "is_limited": false,
+        "index": "8.4",
+        "sold": 1,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.product",
+    "pk": 16,
+    "fields": {
+        "name": "Lenovo ThinkBook 15 G2 ITL (20VE00RWRU)",
+        "slug": "lenovo-thinkbook-15-g2-itl-20ve00rwru",
+        "description": "<p>The Lenovo ThinkBook 15 G2 ITL business laptop is equipped with a quad-core Core i5 processor from Intel. The 2.4GHz frequency ensures uninterrupted operation regardless of the intensity of the load. The amount of RAM is 8 GB. It can be increased to 40 GB. There is also a 256 GB SSD hard drive and a slot for SD and MMC cards.</p>\r\n\r\n<p>The Iris Xe Graphics controller is responsible for the graphics quality. The 15.6&quot; diagonal screen is equipped with an IPS matrix. The matte surface eliminates glare. The keys are highlighted. Two microphones and a Dolby Audio speaker system consisting of two speakers are built into the case. The fingerprint sensor guarantees the security of personal access.</p>\r\n\r\n<p>Windows 10 Pro OS is installed. Wireless connection is available thanks to Bluetooth and Wi-Fi modules. Peripheral equipment is connected via HDMI, USB, RJ45 and 3.5 mm interfaces. The device does not require recharging for six hours. Its dimensions are 18.9 x 357 x 235 mm. Weight &mdash; 1.7 kg.</p>",
+        "short_description": "<p>The Lenovo ThinkBook 15 G2 ITL business laptop is equipped with a quad-core Core i5 processor from Intel. The 2.4GHz frequency ensures uninterrupted operation regardless of the intensity of the load. The amount of RAM is 8 GB. It can be increased to 40 GB. There is also a 256 GB SSD hard drive and a slot for SD and MMC cards.</p>\r\n\r\n<p>&nbsp;</p>",
+        "price": "1000.00",
+        "amount": 5,
+        "creation_date": "2023-01-21T13:54:51.982Z",
+        "update_date": "2023-01-21T13:54:51.982Z",
+        "image": "goods/30063820bb.jpg",
+        "category": 2,
+        "is_limited": true,
+        "index": "9.0",
+        "sold": 1,
+        "is_active": true
+    }
+},
+{
+    "model": "shop.productimage",
+    "pk": 1,
+    "fields": {
+        "product": 14,
+        "image": "product_images/30065819bb.jpg"
+    }
+},
+{
+    "model": "shop.feedback",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "product": 2,
+        "feedback": "Super",
+        "score": 0,
+        "creation_date": "2023-01-21T12:55:50.461Z",
+        "email": "mishustin.vadim@yandex.ru",
+        "name": "None"
+    }
+},
+{
+    "model": "shop.order",
+    "pk": 1,
+    "fields": {
+        "customer": 1,
+        "date_of_creation": "2023-01-21T12:27:58.815Z",
+        "date_of_changing": "2023-01-21T13:57:14.993Z",
+        "complete": false
+    }
+},
+{
+    "model": "shop.delivery",
+    "pk": 1,
+    "fields": {
+        "address": null,
+        "order": 1,
+        "comment": null,
+        "complete": false,
+        "type_of_delivery": null
+    }
+},
+{
+    "model": "shop.typeofdelivery",
+    "pk": 1,
+    "fields": {
+        "type_of_delivery": "NORMAL",
+        "min_order": "500.00",
+        "cost": "50.00",
+        "additional_cost": "0.00"
+    }
+},
+{
+    "model": "shop.typeofdelivery",
+    "pk": 2,
+    "fields": {
+        "type_of_delivery": "EXPRESS",
+        "min_order": "0.00",
+        "cost": "0.00",
+        "additional_cost": "50.00"
+    }
+}
+]

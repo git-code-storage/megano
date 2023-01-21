@@ -173,7 +173,3 @@ CACHES = {
         'LOCATION': 'unique-megano',
     }
 }
-
-FIXTURE_DIRS = [
-    'fixtures',
-]
