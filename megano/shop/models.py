@@ -243,3 +243,28 @@ class TypeOfDelivery(models.Model):
         db_table = 'type_of_delivery'
         verbose_name = 'type of delivery'
         verbose_name_plural = 'type of deliveries'
+
+
+class SingletonModel(models.Model):
+    class Meta:
+        abstract = True
+
+    def save(self, *args, **kwargs):
+        self.__class__.objects.exclude(id=self.id).delete()
+        super(SingletonModel, self).save(*args, **kwargs)
+
+    @classmethod
+    def load(cls):
+        try:
+            return cls.objects.get()
+        except cls.DoesNotExist:
+            return cls()
+
+
+class SiteSettings(SingletonModel):
+    site_url = models.URLField(verbose_name='website url', max_length=256)
+    title = models.CharField(verbose_name='title', max_length=256)
+
+    def __str__(self):
+        return 'Configuration'
+

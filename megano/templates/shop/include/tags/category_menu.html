@@ -11,7 +11,7 @@
             {% endif %}
 
             {% if node.is_child_node and node.is_leaf_node and node.is_active  %}
-                <a class="CategoriesButton-link" href="{% url 'products_by_category' node.slug 'pop_asc' %}">
+                <a class="CategoriesButton-link" href="{% url 'products_by_category' node.slug 'sold' %}">
             {% endif %}
 
                <div class="CategoriesButton-icon"><img src="{% static 'img/icons/departments/1.svg' %}" alt="1.svg"/>

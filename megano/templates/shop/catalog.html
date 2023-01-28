@@ -79,29 +79,29 @@
             </div>
 
 
-            {% if sort == 'pop_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            {% if sort == '-sold' %}
+            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
-            {% elif sort == 'cost_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=cost_desc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            {% elif sort == 'price' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=-price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
-            {% elif sort == 'cost_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            {% elif sort == '-price' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
-            {% elif sort == 'feed_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=feed_desc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            {% elif sort == 'index' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=-index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
-            {% elif sort == 'feed_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            {% elif sort == '-index' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
-            {% elif sort == 'new_asc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=new_desc">Novelty</a>
+            {% elif sort == 'creation_date' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=-creation_date">Novelty</a>
             </div>
-            {% elif sort == 'new_desc' %}
-            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=pop_asc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=new_asc">Novelty</a>
+            {% elif sort == '-creation_date' %}
+            <div class="Sort-variants"><a class="Sort-sortBy" href="?sort_by=sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy Sort-sortBy_inc" href="?sort_by=creation_date">Novelty</a>
             </div>
             {% else %}
-            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=pop_desc">Popularity</a><a class="Sort-sortBy" href="?sort_by=cost_asc">Price</a><a class="Sort-sortBy" href="?sort_by=feed_asc">Reviews</a><a class="Sort-sortBy" href="?sort_by=new_asc">Novelty</a>
+            <div class="Sort-variants"><a class="Sort-sortBy Sort-sortBy_dec" href="?sort_by=-sold">Popularity</a><a class="Sort-sortBy" href="?sort_by=price">Price</a><a class="Sort-sortBy" href="?sort_by=index">Reviews</a><a class="Sort-sortBy" href="?sort_by=creation_date">Novelty</a>
             </div>
             {% endif %}
 

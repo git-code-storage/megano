@@ -7,7 +7,7 @@
     {% cache 300 top_categories %}
     <div class="Section">
       <div class="wrap">
-        <div class="BannersHome"><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.0.slug 'pop_asc' %}">
+        <div class="BannersHome"><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.0.slug 'sold' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
                 <strong class="BannersHomeBlock-title">{{top_categories.0.name}}
@@ -19,7 +19,7 @@
                 <div class="BannersHomeBlock-img"><img src="{{ top_categories.0.image_url }}" alt="{{top_categories.0.name}}"/>
                 </div>
               </div>
-            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.1.slug 'pop_asc' %}">
+            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.1.slug 'sold' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
                 <strong class="BannersHomeBlock-title">{{top_categories.1.name}}
@@ -31,7 +31,7 @@
                 <div class="BannersHomeBlock-img"><img src="{{ top_categories.1.image_url }}" alt="{{top_categories.1.name}}"/>
                 </div>
               </div>
-            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.2.slug 'pop_asc' %}">
+            </div></a><a class="BannersHomeBlock" href="{% url 'products_by_category' top_categories.2.slug 'sold' %}">
             <div class="BannersHomeBlock-row">
               <div class="BannersHomeBlock-block">
                 <strong class="BannersHomeBlock-title">{{top_categories.2.name}}
